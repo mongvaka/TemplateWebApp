@@ -1,0 +1,150 @@
+<div class="k-container-cm">
+  <div class="k-w-max none-print k-bw">
+    <div>
+      <p *ngIf="!isUpdateMode">
+        {{ "LABEL.TRANSFER_TRANS" | translate }}
+        <i class="fas fa-chevron-right"></i> {{ "LABEL.CREATE" | translate }}
+      </p>
+      <p *ngIf="isUpdateMode">
+        {{ "LABEL.TRANSFER_TRANS" | translate }}
+        <i class="fas fa-chevron-right"></i> {{ "LABEL.EDIT" | translate }}
+      </p>
+    </div>
+    <div class="cust-m-right-50"></div>
+  </div>
+  <div class="k-w-max cust-g-btn k-display-flex">
+    <div>
+      <cust-button
+        inputId="CANCEL"
+        icon="fas fa-chevron-circle-left"
+        [label]="'LABEL.BACK' | translate"
+        className="cust-btn-back"
+        [kisConfig]="buttonConfig"
+        (click)="onClose()"
+      ></cust-button>
+    </div>
+    <div class="cust-m-right-50">
+      <div class="cust-display-flex-space-between"></div>
+    </div>
+  </div>
+  <br />
+  <div class="k-card">
+    <div class="k-container-sm">
+      <div class="k-col-8">
+        <span class="h2">{{ "LABEL.GENERAL" | translate }}</span>
+      </div>
+      <br />
+      <div class="p-d-flex p-flex-wrap">
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label required>{{ "LABEL.EMPLOYEE_UUID" | translate }} : </label>
+          <cust-dropdown
+            inputId="EMPLOYEE_UUID"
+            [(kisModel)]="model.employee_uuid"
+            [options]="employeeOptions"
+            [kisConfig]="DEFAULT_DROPDOWN"
+            required
+          ></cust-dropdown>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label required>{{ "LABEL.DEPARTMENT_UUID" | translate }} : </label>
+          <cust-dropdown
+            inputId="DEPARTMENT_UUID"
+            [(kisModel)]="model.department_uuid"
+            [options]="departmentOptions"
+            [kisConfig]="DEFAULT_DROPDOWN"
+            required
+          ></cust-dropdown>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label required>{{ "LABEL.POSITION_UUID" | translate }} : </label>
+          <cust-dropdown
+            inputId="POSITION_UUID"
+            [(kisModel)]="model.position_uuid"
+            [options]="positionOptions"
+            [kisConfig]="DEFAULT_DROPDOWN"
+            required
+          ></cust-dropdown>
+        </div>
+
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label required>{{ "LABEL.DEPARTMENT_NEW" | translate }} : </label>
+          <cust-dropdown
+            inputId="DEPARTMENT_NEW"
+            [(kisModel)]="model.department_new"
+            [options]="departmentnewOptions"
+            [kisConfig]="DEFAULT_DROPDOWN"
+            required
+          ></cust-dropdown>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label required
+            >{{ "LABEL.TRANSFER_TRANS_DATE" | translate }} :
+          </label>
+          <cust-calendar
+            inputId="TRANSFER_TRANS_DATE"
+            [(kisModel)]="model.transfer_trans_date"
+            [kisConfig]="DATE"
+            required
+          ></cust-calendar>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label required>{{ "LABEL.EFFECTIVE_DATE" | translate }} : </label>
+          <cust-calendar
+            inputId="EFFECTIVE_DATE"
+            [(kisModel)]="model.effective_date"
+            [kisConfig]="DATE"
+            required
+          ></cust-calendar>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label required>{{ "LABEL.DOCUMENT_STATUS" | translate }} : </label>
+          <cust-dropdown
+            inputId="DOCUMENT_STATUS"
+            [(kisModel)]="model.document_status_uuid"
+            [options]="documentStatusOptions"
+            [kisConfig]="DEFAULT_DROPDOWN"
+            required
+          ></cust-dropdown>
+        </div>
+
+        <div class="p-d-flex p-flex-column ele-box-w-50">
+          <label>{{ "LABEL.REMARK" | translate }} : </label>
+          <cust-textarea
+            inputId="REMARK"
+            [(kisModel)]="model.remark"
+            [kisConfig]="DEFAULT_TEXTAREA"
+          ></cust-textarea>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <br />
+
+  <br />
+  <div class="k-display-block">
+    <cust-button
+      inputId="POST"
+      [label]="'LABEL.POST' | translate"
+      className="cust-btn-primary k-ml p-m-2"
+      [kisConfig]="buttonConfig"
+      (formValidate)="onSaveAndClose($event)"
+    ></cust-button>
+    <div class="k-layout-l">
+      <cust-button
+        inputId="CANCEL"
+        [label]="'LABEL.CANCEL' | translate"
+        className="cust-btn-outline-primary p-m-2"
+        [kisConfig]="buttonConfig"
+        (click)="onClose()"
+      ></cust-button>
+      <cust-button
+        inputId="SAVE"
+        [label]="'LABEL.OK' | translate"
+        className="cust-btn-primary k-ml p-m-2"
+        [kisConfig]="buttonConfig"
+        (formValidate)="onSave($event)"
+      ></cust-button>
+    </div>
+  </div>
+</div>

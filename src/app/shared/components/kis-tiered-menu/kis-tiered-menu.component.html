@@ -1,0 +1,15 @@
+<p-tieredMenu
+  #menu
+  class="tiered"
+  [model]="bindingitem"
+  [popup]="true"
+></p-tieredMenu>
+<button
+  [disabled]="disable"
+  #btn
+  type="button"
+  class="p-button"
+  (click)="menu.toggle($event)"
+>
+  <i class="{{ bindingicon }}"></i>&nbsp; {{ bindinglable }}
+</button>

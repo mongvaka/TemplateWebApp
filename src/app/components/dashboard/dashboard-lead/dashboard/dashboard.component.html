@@ -1,0 +1,105 @@
+<div style="margin: 75px 30px">
+  <div class="pagetitle">{{ "LABEL.TODOLIST_LEAD" | translate }}</div>
+  <div class="cust-grid" [class.cust-grid-none]="tablenone">
+    <div
+      class="line box1 numbershow"
+      routerLink="/hrm/employee/probationtrans-lead"
+    >
+      <div class="title">
+        {{ "LABEL.REQUEST_ADJUST_PROBATION_LEAD" | translate }}
+      </div>
+      <div class="number" innerHtm>
+        {{ number_rows[0].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+    <div
+      class="line box2 numbershow"
+      routerLink="/hrm/employee/positiontrans-lead"
+    >
+      <div class="title">
+        {{ "LABEL.REQUEST_ADJUST_POSITION_LEAD" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[1].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+    <div
+      class="line box3 numbershow"
+      routerLink="/hrm/employee/salarytrans-lead"
+    >
+      <div class="title">
+        {{ "LABEL.REQUEST_ADJUST_SALARY_LEAD" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[2].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+    <div class="line box4 numbershow" routerLink="/hrm/employee/resignlead">
+      <div class="title">
+        {{ "LABEL.RESIGN_LEAD" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[3].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+
+    <div
+      class="line box5 numbershow"
+      routerLink="/hrm/employee/leavetrans-lead"
+    >
+      <div class="title">
+        {{ "LABEL.LEAVE_TRANS_LEAD" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[4].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+    <div class="line box6 numbershow" routerLink="/hrm/employee/overtime-lead">
+      <div class="title">
+        {{ "LABEL.REQUEST_OVERTIME_LEAD" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[5].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+    <div class="line box7 numbershow" routerLink="/hrm/employee/transfer-lead">
+      <div class="title">
+        {{ "LABEL.REQUEST_TRANSFER_LEAD" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[6].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+
+    <div
+      class="line box8 numbershow"
+      routerLink="/hrm/employee/requestrevisiontime-lead"
+    >
+      <div class="title">
+        {{ "LABEL.REQUEST_REVISION_TIME_LEAD" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[7].value }}
+      </div>
+
+      <div class="lates">{{ "LABEL.LIST" | translate }}</div>
+    </div>
+  </div>
+  <div class="status" [class.status-none]="tablenone">
+    บัญชีนี้ยังไม่ผูกกับพนังงาน
+  </div>
+</div>

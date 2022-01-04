@@ -1,0 +1,58 @@
+.k-card {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-top: 40px;
+  animation: card 0.4s both;
+}
+@keyframes card {
+  from {
+    margin-top: 40px;
+  }
+  to {
+    margin-top: 0px;
+  }
+}
+
+.k-card-info {
+  cursor: pointer;
+  display: none;
+  background-color: #fff;
+  border-radius: 3px;
+  width: 110px;
+  height: auto;
+  color: $font_color;
+  margin-left: -22px;
+}
+.k-open {
+  cursor: pointer;
+  display: block;
+  color: $font_color;
+}
+.k-open:hover .k-card-info {
+  display: block;
+}
+
+.k-card-d {
+  width: 200px;
+  position: absolute;
+  border-radius: 4px;
+  margin-top: 5px;
+  display: block;
+  visibility: hidden;
+  margin-left: 270px;
+  transition: 0.5s;
+  backdrop-filter: blur(30px);
+  opacity: 0;
+  background-color: #ffffff8f;
+  box-shadow: rgba(99, 99, 99, 0.56) 0px 2px 8px 0px;
+}
+
+.k-card-d-c {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cust-card-limiter {
+  background-color: #ffe4b5;
+  border: 3px solid #f38989;
+}

@@ -1,0 +1,130 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PathType = exports.Ordinal = exports.MaskType = exports.HTTPTYPE = exports.ElementType = exports.AccessLevel = exports.LogType = exports.AccessMode = exports.BracketType = exports.SortType = exports.ColumnType = exports.itemViewMode = void 0;
+var itemViewMode;
+(function (itemViewMode) {
+    itemViewMode[itemViewMode["create"] = 0] = "create";
+    itemViewMode[itemViewMode["update"] = 1] = "update";
+    itemViewMode[itemViewMode["view"] = 2] = "view";
+})(itemViewMode = exports.itemViewMode || (exports.itemViewMode = {}));
+var ColumnType;
+(function (ColumnType) {
+    ColumnType["STRING"] = "STRING";
+    ColumnType["INT"] = "INT";
+    ColumnType["DATE"] = "DATE";
+    ColumnType["DATERANGE"] = "DATERANGE";
+    ColumnType["BOOLEAN"] = "BOOLEAN";
+    ColumnType["MASTER"] = "MASTER";
+    ColumnType["ENUM"] = "ENUM";
+    ColumnType["DECIMAL"] = "DECIMAL";
+    ColumnType["VARIABLE"] = "VARIABLE";
+    ColumnType["VARIABLES"] = "VARIABLES";
+    ColumnType["MASTERSINGLE"] = "MASTERSINGLE";
+    ColumnType["CONTROLLER"] = "CONTROLLER";
+    ColumnType["HIDDEN"] = "HIDDEN";
+})(ColumnType = exports.ColumnType || (exports.ColumnType = {}));
+var SortType;
+(function (SortType) {
+    SortType[SortType["ASC"] = 1] = "ASC";
+    SortType[SortType["DESC"] = 0] = "DESC";
+    SortType[SortType["NONE"] = null] = "NONE";
+})(SortType = exports.SortType || (exports.SortType = {}));
+var BracketType;
+(function (BracketType) {
+    BracketType[BracketType["None"] = 0] = "None";
+    BracketType[BracketType["SingleStart"] = 1] = "SingleStart";
+    BracketType[BracketType["SingleEnd"] = 2] = "SingleEnd";
+    BracketType[BracketType["DoubleStart"] = 3] = "DoubleStart";
+    BracketType[BracketType["DoubleEnd"] = 4] = "DoubleEnd";
+})(BracketType = exports.BracketType || (exports.BracketType = {}));
+var AccessMode;
+(function (AccessMode) {
+    AccessMode[AccessMode["noAccess"] = 0] = "noAccess";
+    AccessMode[AccessMode["viewer"] = 1] = "viewer";
+    AccessMode[AccessMode["editor"] = 2] = "editor";
+    AccessMode[AccessMode["creator"] = 3] = "creator";
+    AccessMode[AccessMode["full"] = 4] = "full";
+})(AccessMode = exports.AccessMode || (exports.AccessMode = {}));
+var LogType;
+(function (LogType) {
+    LogType[LogType["SYSTEM"] = 0] = "SYSTEM";
+    LogType[LogType["NORMAL"] = 1] = "NORMAL";
+})(LogType = exports.LogType || (exports.LogType = {}));
+var AccessLevel;
+(function (AccessLevel) {
+    AccessLevel[AccessLevel["None"] = 0] = "None";
+    AccessLevel[AccessLevel["User"] = 1] = "User";
+    AccessLevel[AccessLevel["Department"] = 2] = "Department";
+    AccessLevel[AccessLevel["Branch"] = 3] = "Branch";
+    AccessLevel[AccessLevel["Company"] = 4] = "Company";
+})(AccessLevel = exports.AccessLevel || (exports.AccessLevel = {}));
+var ElementType;
+(function (ElementType) {
+    ElementType["P_DROPDOWN"] = "P-DROPDOWN";
+    ElementType["P_CALENDAR"] = "P-CALENDAR";
+    ElementType["INPUT"] = "INPUT";
+    ElementType["TEXTAREA"] = "TEXTAREA";
+    ElementType["BUTTON"] = "BUTTON";
+    ElementType["P_RADIOBUTTON"] = "P-RADIOBUTTON";
+    ElementType["P_CHECKBOX"] = "P-CHECKBOX";
+    ElementType["IV_PERCENT_INPUT"] = "IV-PERCENT-INPUT";
+    ElementType["P_INPUTSWITCH"] = "P-INPUTSWITCH";
+    ElementType["P_MULTISELECT"] = "P-MULTISELECT";
+    ElementType["P_SELECTBUTTON"] = "P-SELECTBUTTON";
+    ElementType["COMMENT"] = "#comment";
+    ElementType["P_TIEREDMENU"] = "P-TIEREDMENU";
+    ElementType["A"] = "A";
+    ElementType["SPAN"] = "SPAN";
+    ElementType["P_INPUTNUMBER"] = "P-INPUTNUMBER";
+    ElementType["LABEL"] = "LABEL";
+})(ElementType = exports.ElementType || (exports.ElementType = {}));
+var HTTPTYPE;
+(function (HTTPTYPE) {
+    HTTPTYPE[HTTPTYPE["REQUESTING"] = 0] = "REQUESTING";
+    HTTPTYPE[HTTPTYPE["RESPONSED"] = 1] = "RESPONSED";
+    HTTPTYPE[HTTPTYPE["CLIENTPROCESS"] = 2] = "CLIENTPROCESS";
+})(HTTPTYPE = exports.HTTPTYPE || (exports.HTTPTYPE = {}));
+var MaskType;
+(function (MaskType) {
+    MaskType[MaskType["NUMBER"] = 0] = "NUMBER";
+    MaskType[MaskType["CURRENCY"] = 1] = "CURRENCY";
+    MaskType[MaskType["PERCENT"] = 2] = "PERCENT";
+})(MaskType = exports.MaskType || (exports.MaskType = {}));
+var Ordinal;
+(function (Ordinal) {
+    Ordinal[Ordinal["Clear"] = 0] = "Clear";
+    Ordinal[Ordinal["System"] = 1] = "System";
+    Ordinal[Ordinal["First"] = 2] = "First";
+    Ordinal[Ordinal["Second"] = 3] = "Second";
+    Ordinal[Ordinal["Third"] = 4] = "Third";
+    Ordinal[Ordinal["Fourth"] = 5] = "Fourth";
+    Ordinal[Ordinal["Fifth"] = 6] = "Fifth";
+    Ordinal[Ordinal["Sixth"] = 7] = "Sixth";
+    Ordinal[Ordinal["Seventh"] = 8] = "Seventh";
+    Ordinal[Ordinal["Eighth"] = 9] = "Eighth";
+    Ordinal[Ordinal["Ninth"] = 10] = "Ninth";
+    Ordinal[Ordinal["Tenth"] = 11] = "Tenth";
+    Ordinal[Ordinal["E11"] = 12] = "E11";
+    Ordinal[Ordinal["E12"] = 13] = "E12";
+    Ordinal[Ordinal["E13"] = 14] = "E13";
+    Ordinal[Ordinal["E14"] = 15] = "E14";
+    Ordinal[Ordinal["E15"] = 16] = "E15";
+    Ordinal[Ordinal["E16"] = 17] = "E16";
+    Ordinal[Ordinal["E17"] = 18] = "E17";
+    Ordinal[Ordinal["E18"] = 19] = "E18";
+    Ordinal[Ordinal["E19"] = 20] = "E19";
+    Ordinal[Ordinal["E20"] = 21] = "E20";
+    Ordinal[Ordinal["Batch01"] = 22] = "Batch01";
+    Ordinal[Ordinal["Batch02"] = 23] = "Batch02";
+    Ordinal[Ordinal["Batch03"] = 24] = "Batch03";
+    Ordinal[Ordinal["Batch04"] = 25] = "Batch04";
+    Ordinal[Ordinal["Batch05"] = 26] = "Batch05";
+    Ordinal[Ordinal["Batch06"] = 27] = "Batch06";
+    Ordinal[Ordinal["Batch07"] = 28] = "Batch07";
+    Ordinal[Ordinal["ViewOnly"] = 29] = "ViewOnly";
+})(Ordinal = exports.Ordinal || (exports.Ordinal = {}));
+var PathType;
+(function (PathType) {
+    PathType["LIST"] = "list";
+    PathType["ITEM"] = "item";
+})(PathType = exports.PathType || (exports.PathType = {}));

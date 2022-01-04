@@ -1,0 +1,26 @@
+<!-- <label for="file-upload" class="custom-file-upload"> -->
+<input
+  type="file"
+  id="file-upload"
+  id="fileDropRef"
+  class="w-100 file"
+  (change)="onChange($event)"
+  style="color: #9b9b9b"
+  [(ngModel)]="bindingModel"
+/>
+
+<br />
+<br />
+
+<p-table [value]="Arry" class="cust-table">
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let col of colum">{{ col }}</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td *ngFor="let col of colum">{{ product[col] }}</td>
+    </tr>
+  </ng-template>
+</p-table>

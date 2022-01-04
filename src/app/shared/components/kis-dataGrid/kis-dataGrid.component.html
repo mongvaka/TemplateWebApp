@@ -1,0 +1,231 @@
+<p-table
+  class="cust-table"
+  [value]="bindingDataSource"
+  #dt1
+  [showCurrentPageReport]="true"
+  responsiveLayout="scroll"
+  currentPageReportTemplate="{{ 'LABEL.SHOWING' | translate }}   {first} {{
+    'LABEL.TO' | translate
+  }} {last}"
+  (onPage)="paginate($event)"
+  [selectionMode]="'multiple'"
+  [(selection)]="multipleSelected"
+  (onRowSelect)="onRowSelect($event)"
+  (onRowUnselect)="onRowUnselect($event)"
+  (onHeaderCheckboxToggle)="onTableHeaderCheckboxToggle($event, key)"
+  [globalFilterFields]="bindingColumn"
+>
+  <ng-template pTemplate="caption" id="search">
+    <div class="p-d-flex">
+      <button
+        pButton
+        class="p-button-outlined"
+        type="button"
+        icon="pi pi-filter"
+        label="Filter"
+        (click)="
+          this.isSearch = !this.isSearch; this.getMenuBarItem(); onFilter()
+        "
+      ></button>
+      <span class="p-input-icon-left p-ml-auto">
+        <!-- <i class="pi pi-search"></i>
+        <input
+          pInputText
+          type="text"
+          (input)="dt1.filterGlobal($event.target.value, 'contains')"
+          placeholder="Search Keyword"
+        /> -->
+      </span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngIf="isMultipleSelection">
+        <p-checkbox
+          (click)="onTableHeaderCheckboxToggle(e, key)"
+          #e
+          inputId="tableHeaderCheckbox"
+          [(ngModel)]="tableHeaderCheckboxIsCheck"
+          [binary]="true"
+        ></p-checkbox>
+      </th>
+      <th
+        id="action-th"
+        *ngIf="(canView || canDelete) && !isMultipleSelection"
+        [ngStyle]="actionTh"
+        [className]="bindingOption.showPaginator ? '' : 'local'"
+      >
+        <button class="cust-btn-refresh" (click)="search()">
+          <!-- <img src="../../../../assets/images/foldericon.png" width="25px"> -->
+          <i class="{{ icon }}"></i>
+        </button>
+      </th>
+      <th
+        *ngFor="
+          let header of bindingOption.columns | dgColumn: false;
+          let i = index
+        "
+        [ngStyle]="header.width"
+        [className]="
+          header.type !== 'HIDDEN' && header.visibility && !header.disabled
+            ? bindingOption.showPaginator &&
+              !bindingOption.isAdvance &&
+              !header.disabledFilter
+              ? ''
+              : 'local'
+            : 'display-none'
+        "
+        (click)="onSort(header)"
+      >
+        {{ header.label | translate }}
+        <i *ngIf="header.sorting == 0" class="pi pi-sort-amount-down"></i>
+        <i *ngIf="header.sorting == 1" class="pi pi-sort-amount-up"></i>
+      </th>
+    </tr>
+    <tr *ngIf="isSearch && !bindingOption.isAdvance" class="row-search">
+      <th
+        style="justify-content: center; align-items: center"
+        style="background-color: #ffffff !important"
+      ></th>
+      <th
+        *ngFor="let header of bindingOption.columns; let i = index"
+        style="background-color: #ffffff !important"
+        [className]="header.label === null ? 'display-none' : header.type"
+      >
+        <cust-input-text
+          *ngIf="header.type === columnType.STRING"
+          [(kisModel)]="searchParam.searchCondition[i].value"
+          inputId="DATAGRID_STRING"
+          (keyup.enter)="onSearch()"
+          [kisConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+        <cust-input-number
+          *ngIf="header.type === columnType.INT"
+          [(kisModel)]="searchParam.searchCondition[i].value"
+          inputId="DATAGRID_NUMBER"
+          (keyup.enter)="onSearch()"
+          [kisConfig]="INTEGER"
+        >
+        </cust-input-number>
+        <cust-input-number
+          *ngIf="header.type === columnType.DECIMAL"
+          [(kisModel)]="searchParam.searchCondition[i].value"
+          inputId="DATAGRID_NUMBER"
+          (keyup.enter)="onSearch()"
+          [kisConfig]="CURRENCY_13_2"
+        >
+        </cust-input-number>
+        <cust-calendar
+          *ngIf="header.type === columnType.DATE"
+          [(kisModel)]="searchParam.searchCondition[i].value"
+          inputId="DATAGRID_DATE"
+          [kisConfig]="DATE"
+          [minDate]="header.minDate"
+          [maxDate]="header.maxDate"
+        >
+        </cust-calendar>
+        <cust-calendar
+          *ngIf="header.type === columnType.DATERANGE"
+          [(kisModel)]="searchParam.searchCondition[i].value"
+          inputId="DATAGRID_DATE"
+          [kisConfig]="DATERANGE"
+          [minDate]="header.minDate"
+          [maxDate]="header.maxDate"
+        >
+        </cust-calendar>
+        <cust-dropdown
+          *ngIf="header.type === columnType.BOOLEAN"
+          [(kisModel)]="searchParam.searchCondition[i].value"
+          inputId="DATAGRID_BOOLEAN"
+          [options]="header.masterList"
+          [kisConfig]="DEFAULT_DROPDOWN"
+        >
+        </cust-dropdown>
+        <cust-multi-select
+          *ngIf="
+            header.type === columnType.MASTER || header.type === columnType.ENUM
+          "
+          [(kisModel)]="searchParam.searchCondition[i].values"
+          inputId="DATAGRID_MULTISELECT"
+          [options]="header.masterList"
+          [kisConfig]="DEFAULT_MULTISELECT"
+        >
+        </cust-multi-select>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-row let-rowIndex="rowIndex">
+    <tr>
+      <td *ngIf="isMultipleSelection">
+        <p-tableCheckbox [value]="row"></p-tableCheckbox>
+      </td>
+      <td
+        *ngIf="(canView || canDelete) && !isMultipleSelection"
+        class="td-btn ui-resizable-column"
+      >
+        <div class="cust-table-manage k-center">
+          <button
+            class="cust-btn-primary"
+            type="button"
+            icon="fas fa-folder"
+            iconPos="left"
+            (click)="onView(row[key], rowIndex, $event)"
+            [ngClass]="{ 'display-none': !canView }"
+            [disabled]="row.rowAuthorize === accessMode.noAccess"
+          >
+            <i class="fas fa-folder"></i>
+          </button>
+          <button
+            class="cust-btn-danger k-ml-2"
+            *ngIf="deleteBtn"
+            type="button"
+            icon="pi pi-trash"
+            iconPos="left"
+            (click)="onDelete(row[key], rowIndex)"
+            [ngClass]="{ 'display-none': !canDelete }"
+          >
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </div>
+      </td>
+      <td
+        *ngFor="
+          let col of bindingOption.columns | dgColumn: false;
+          let i = index
+        "
+        [className]="
+          col.type !== 'HIDDEN' && col.visibility && !col.disabled
+            ? col.type
+            : 'display-none'
+        "
+        [class.word-wrap]="true"
+        [class.text-align-center]="col.type === columnType.BOOLEAN"
+      >
+        <span *ngIf="col.type === columnType.BOOLEAN">
+          <cust-input-switch
+            inputId="binary"
+            [binary]="true"
+            [readonly]="true"
+            [(kisModel)]="row[col.textKey]"
+          ></cust-input-switch>
+        </span>
+        <span
+          *ngIf="col.type !== columnType.BOOLEAN"
+          [innerHtml]="row[col.textKey] | dataDisplay: col:col.type:i"
+        ></span>
+
+        <!-- ____________ ถ้า colume type เท่ากับ DECIMAL ____________ -->
+        <span *ngIf="col.type === 'DECIMAL'">
+          {{ row[col.textKey] | number: "1.2-5" }}
+        </span>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<p-paginator
+  (onPageChange)="paginate($event)"
+  [rows]="paginator.rows"
+  [totalRecords]="totalRecord"
+  [rowsPerPageOptions]="[10, 20, 30]"
+></p-paginator>

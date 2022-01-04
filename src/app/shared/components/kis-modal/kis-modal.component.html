@@ -1,0 +1,36 @@
+<div class="cust-container-modal" [class.cust-container-modal-close]="modal1">
+  <div
+    class="cust-modal-card {{ bindingHeight }}"
+    [class.cust-modal-card-close]="modal1"
+  >
+    <div class="cust-space-between">
+      <div></div>
+      <div class="cust-cross" (click)="close()">
+        <i class="fas fa-times"></i>
+      </div>
+    </div>
+    <div style="padding: 5px">
+      <p class="cust-title">{{ bindingTitle }}</p>
+    </div>
+    <div class="cust-modal-from">
+      <div class="k-row k-row-2">
+        <label>{{ bindingTitleInput1 }} : </label>
+        <input class="k-input" />
+      </div>
+      <br />
+      <div class="k-row k-row-2">
+        <label>{{ bindingTitleInput2 }} :</label>
+        <textarea class="w-100 k-input k-input-are"></textarea>
+        <br />
+        <div class="cust-display-grid-b-2 cust-p-c-2">
+          <button class="cust-btn-outline-primary w-100" (click)="close()">
+            {{ "LABEL.CANCEL" | translate }}
+          </button>
+          <button class="cust-btn-primary w-100">
+            {{ "LABEL.CONFIRM" | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

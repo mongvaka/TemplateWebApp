@@ -1,0 +1,128 @@
+// .cust-input-file {
+//   height: 100px;
+// }
+
+::-webkit-file-upload-button {
+  padding: 7px 20px;
+  border: 2px solid#85b4fc;
+  background-color: #85b4fc;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 4px !important;
+  transition: 0.5s;
+  cursor: pointer;
+  // opacity: 0 !important;
+}
+// .file {
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   width: 100%;
+//   height: 100%;
+//   z-index: 999;
+// }
+
+// .input[type="file"] {
+//   visibility: hidden;
+// }
+// .btn {
+//   text-align: center;
+//   position: absolute;
+//   margin: auto;
+
+//   right: 15%;
+//   left: 15%;
+//   border-radius: 4px;
+//   padding: 10px 5px;
+// }
+// #name {
+//   margin-left: 20px;
+// }
+// #aa {
+//   position: absolute;
+//   top: 0px;
+// }
+
+.cust-table::ng-deep table {
+  table-layout: auto;
+  border-radius: 8px;
+  border-collapse: collapse;
+  z-index: -1;
+}
+.cust-table::ng-deep th {
+  color: #fff !important;
+  font-weight: 500 !important;
+  border: 0.3px solid #dfdfdf !important;
+  background-color: #ff5d5d !important;
+}
+
+.cust-table::ng-deep .p-paginator {
+  margin-top: 20px;
+  border-width: 0;
+  justify-content: center;
+  width: 100% !important;
+}
+.cust-table::ng-deep th {
+  color: rgb(180, 180, 180);
+}
+
+.cust-table::ng-deep .p-datatable .p-datatable-tbody > tr > td {
+  text-align: left;
+  border-bottom: 0px solid #f3f3f3 !important;
+  border: 0.3px solid #dfdfdf;
+  padding: 1.5rem 1rem;
+}
+
+.cust-table::ng-deep .p-datatable .p-datatable-tbody > tr {
+  transition: 500ms;
+}
+.cust-table::ng-deep .p-datatable .p-datatable-tbody > tr:nth-last-child(1) {
+  border-radius: 0px 0px 8px 8px;
+}
+.cust-table::ng-deep.p-datatable .p-paginator-bottom {
+  border-radius: 8px;
+}
+
+.cust-table th,
+td {
+  width: 10% !important;
+  padding: 9px 10px;
+  color: #727272;
+}
+.cust-table::ng-deep.p-paginator-right-content {
+  display: flex;
+  align-items: center;
+  padding: 0px 15px;
+}
+.cust-table::ng-deep.p-datatable.p-datatable-hoverable-rows
+  .p-datatable-tbody
+  > tr:not(.p-highlight):hover {
+  background-color: #fff;
+}
+
+// .cust-table tr:hover {
+//   background-color: #adadad;
+// }
+.cust-table::ng-deep .p-dropdown {
+  z-index: 1;
+}
+.cust-table tr {
+  text-align: center;
+  background-color: #ffffff;
+}
+.cust-boder-table {
+  border-top: 0px solid #ff5d5d;
+}
+.cust-table th {
+  transition: 1s;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-weight: 500;
+  text-align: left;
+  background-color: #979797;
+  color: white;
+}
+.cust-table-manage {
+  width: auto;
+}

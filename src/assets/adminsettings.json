@@ -1,0 +1,8 @@
+{
+  "toastTimeout": {
+    "error": 60,
+    "success": 5,
+    "warning": 10,
+    "info": 5
+  }
+}

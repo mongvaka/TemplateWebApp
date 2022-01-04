@@ -1,0 +1,76 @@
+// .page-component {
+//   width: 100%;
+//   background-color: $bg-color;
+//   height: 100%;
+// }
+.k-p {
+  padding: 100px;
+}
+.k-ml {
+  margin-left: 10px;
+}
+.k-ml-2 {
+  margin-left: 20px;
+}
+.k-ml-4 {
+  margin-left: 60px;
+}
+
+.k-container-sm {
+  padding: 30px 30px;
+}
+.k-container-cm {
+  padding: 70px 50px 100px 50px;
+}
+.k-container {
+  padding: 50px 50px;
+  transition: 0.5s;
+}
+.k-mt-5 {
+  margin-top: 100px;
+}
+.k-display-flex {
+  display: flex;
+}
+.k-display-bo {
+  display: block;
+}
+.cust-display-flex-space-between {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+  align-items: center;
+}
+.cust-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.k-center {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.k-center-c {
+  justify-content: center;
+}
+.k-row {
+  display: flex;
+  flex-direction: column;
+}
+.k-center-r {
+  align-items: center;
+}
+.k-w-max {
+  width: 100%;
+}
+.k-layout-l {
+  float: right;
+}
+.k-display-block {
+  display: block;
+}
+.cust-display-grid-b-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}

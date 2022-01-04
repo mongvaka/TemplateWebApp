@@ -1,0 +1,139 @@
+.cust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 220px 220px;
+  justify-content: stretch;
+  width: 100%;
+  grid-template-areas: "box1 box2 box3 box4 " "box5 box6 box7 box8 ";
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+.pagetitle {
+  padding: 15px 0px;
+  font-size: 25px;
+  color: #b4b4b4;
+}
+.line {
+  border-radius: 10px;
+}
+.box4 {
+  border: 3px solid #7ab9e6;
+}
+.numbershow {
+  position: relative;
+  padding: 20px 25px;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@for $i from 1 through 9 {
+  .box#{$i} {
+    grid-area: box#{$i};
+    background-color: #fff;
+  }
+}
+
+.user1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.number {
+  display: flex;
+  // width: 100%;
+  transition: 0.7s;
+  justify-content: space-between;
+  align-items: center;
+  color: #7ab9e6;
+  font-weight: 500;
+  font-size: 45px;
+}
+// .numbershow:hover .number{
+//     color: #f36863;
+// }
+.title {
+  color: #b4b4b4;
+  font-size: 14px;
+}
+
+.lates {
+  font-size: 11px;
+  color: #b8b8b8;
+  cursor: pointer;
+}
+.fa-calendar {
+  font-size: 14px;
+}
+@for $i from 1 through 10 {
+  .box#{$i} {
+    transform: scalex(1);
+  }
+}
+
+@for $i from 1 through 10 {
+  .box#{$i}:hover {
+    transform: scalex(1);
+    animation-name: t;
+    animation-duration: 0.7s;
+  }
+}
+
+@keyframes t {
+  10% {
+    transform: scalex(1);
+  }
+  35% {
+    transform: scalex(0.87) translate(0, -8px);
+  }
+  60% {
+    transform: scalex(1.04) translate(0, 7px);
+  }
+  80% {
+    transform: scalex(1);
+  }
+}
+
+table {
+  border: 0px solid gray;
+
+  width: 100%;
+}
+
+td,
+th {
+  border: 0px solid #dddddd;
+  text-align: left;
+  color: rgb(146, 146, 146);
+  padding: 14px;
+}
+td {
+  color: rgb(179, 179, 179);
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.table {
+  overflow: hidden;
+}
+
+.fas {
+  position: absolute;
+  right: 30px;
+  bottom: 22px;
+  color: rgb(182, 182, 182);
+  font-size: 18px;
+}
+
+.cust-grid-none {
+  display: none;
+}
+.status {
+  display: none;
+}
+.status-none {
+  display: block;
+  color: #b4b4b4;
+}

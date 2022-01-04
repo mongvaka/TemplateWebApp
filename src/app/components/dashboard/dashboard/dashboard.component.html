@@ -1,0 +1,50 @@
+<div style="margin: 100px 30px">
+  <div class="cust-grid">
+    <div
+      class="line box1 numbershow"
+      routerLink="/hrm/employee/probationtrans-hr"
+    >
+      <div class="title">
+        {{ "LABEL.REQUEST_ADJUST_PROBATION_HR" | translate }}
+      </div>
+      <div class="number" innerHtm>
+        {{ number_rows[0].value }}
+      </div>
+
+      <div class="lates">From previous period</div>
+    </div>
+    <div
+      class="line box2 numbershow"
+      routerLink="/hrm/employee/positiontrans-hr"
+    >
+      <div class="title">
+        {{ "LABEL.REQUEST_ADJUST_POSITION_HR" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[1].value }}
+      </div>
+
+      <div class="lates">From previous period</div>
+    </div>
+    <div class="line box3 numbershow" routerLink="/hrm/employee/salarytrans-hr">
+      <div class="title">
+        {{ "LABEL.REQUEST_ADJUST_SALARY_HR" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[2].value }}
+      </div>
+
+      <div class="lates">From previous period</div>
+    </div>
+    <div class="line box4 numbershow" routerLink="/hrm/employee/resignhr">
+      <div class="title">
+        {{ "LABEL.RESIGN_HR" | translate }}
+      </div>
+      <div class="number">
+        {{ number_rows[3].value }}
+      </div>
+
+      <div class="lates">From previous period</div>
+    </div>
+  </div>
+</div>

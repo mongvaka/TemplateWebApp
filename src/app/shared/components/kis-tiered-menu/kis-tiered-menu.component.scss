@@ -1,0 +1,24 @@
+.tiered::ng-deep
+  .p-tieredmenu
+  .p-menuitem-active
+  > p-tieredmenusub
+  > .p-submenu-list {
+  left: -100%;
+}
+.p-button {
+  background: rgba(255, 255, 255, 0) !important;
+  color: gray !important;
+  border: 0px solid #2196f3 !important;
+}
+.p-button:hover {
+  color: rgb(182, 182, 182) !important;
+}
+.p-button:focus {
+  color: rgb(204, 203, 203) !important;
+  background: rgba(255, 255, 255, 0.979) !important;
+
+  box-shadow: 0 0 0 0rem #838383;
+}
+.tiered::ng-deep .ng-trigger {
+  left: -100%;
+}

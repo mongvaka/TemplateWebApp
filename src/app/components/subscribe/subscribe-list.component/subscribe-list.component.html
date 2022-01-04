@@ -1,0 +1,57 @@
+<div class="k-container-cm">
+  <div class="k-w-max none-print">
+    <p>
+      {{ "LABEL.SUBSCRIBE" | translate }} <i class="fas fa-chevron-right"></i>
+      {{ "LABEL.LIST" | translate }}
+    </p>
+  </div>
+  <div class="k-w-max cust-g-btn k-display-flex">
+    <div>
+      <cust-button
+        *ngIf="isRelatedMode"
+        inputId="CANCEL"
+        icon="fas fa-chevron-circle-left"
+        [label]="'LABEL.BACK' | translate"
+        className="cust-btn-outline-primary none-print k-ml"
+        [kisConfig]="buttonConfig"
+        (click)="onBack()"
+      ></cust-button>
+      <cust-button
+        inputId="PRINT"
+        [label]="'LABEL.PRINT' | translate"
+        className="cust-btn-outline-primary none-print"
+        [kisConfig]="buttonConfig"
+        onclick="window.print()"
+      ></cust-button>
+      <cust-button
+        inputId="EXPORT_EXCEL"
+        [label]="'LABEL.EXPORT_EXCEL' | translate"
+        className="cust-btn-outline-primary none-print k-ml"
+        [kisConfig]="buttonConfig"
+        (click)="exportToExcel(searchResult)"
+      ></cust-button>
+    </div>
+    <div>
+      <cust-button
+        inputId="SAVE"
+        [label]="'LABEL.CREATE' | translate"
+        className="cust-btn-primary none-print k-ml"
+        [kisConfig]="buttonConfig"
+        (click)="onCreate()"
+      ></cust-button>
+    </div>
+  </div>
+  <br />
+  <cust-data-grid
+    id="SUBSCRIBE"
+    [isNewSearch]="true"
+    [option]="option"
+    [dataSource]="searchResult"
+    [createable]="canCreate"
+    (createEmit)="onCreate($event)"
+    (viewEmit)="onView($event)"
+    (deleteEmit)="onDelete($event)"
+    (filterEmit)="onFilter($event)"
+    (rowAuthEmit)="getRowAuthorize($event)"
+  ></cust-data-grid>
+</div>

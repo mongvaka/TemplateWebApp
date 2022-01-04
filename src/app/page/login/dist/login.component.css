@@ -1,0 +1,160 @@
+* {
+  color: #797979;
+}
+
+.container {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cd {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 75%;
+  height: 75%;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 100, 0.5) 20px 20px 15px 0px;
+}
+
+.input, .rgt {
+  width: 420px;
+  padding: 10px;
+  border: 2px solid #d1d1d1;
+  border-radius: 3px;
+  background-color: #f6f5fa;
+  text-align: center;
+  color: #111;
+}
+
+.rgt {
+  margin: 10px 0px;
+  text-align: left;
+}
+
+.rgt:focus {
+  outline: none;
+  border: 2px solid #ff6464;
+}
+
+.input:focus {
+  outline: none;
+  border: 2px solid #ff6464;
+}
+
+.cleck-box {
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  float: right;
+  width: 420px;
+}
+
+small {
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.from-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.submit {
+  float: left;
+  width: 420px;
+  padding: 10px 0px;
+  color: #ffff;
+  border: 0px solid #ffff;
+  background-color: #ff6464;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.submit:hover {
+  background-color: #ffcdcd;
+}
+
+.colume-left {
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6464;
+  padding: 0px;
+  width: 450px;
+}
+
+#alert {
+  opacity: 0;
+  color: #ff5858;
+  transition: 1s;
+}
+
+.sign {
+  font-size: 46px;
+}
+
+.signUp {
+  padding: 15px 0px;
+  display: flex;
+  justify-content: flex-start;
+  width: 420px;
+}
+
+.container-rgt {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.582);
+  display: flex;
+  position: fixed;
+  backdrop-filter: blur(30px);
+  justify-content: center;
+  align-items: center;
+  margin-top: -200vh;
+  visibility: hidden;
+  transition: 0.5s;
+}
+
+.container-rgt-none {
+  margin-top: 0vh;
+  visibility: visible;
+}
+
+.cards {
+  position: relative;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 5px;
+  border-radius: 5px;
+}
+
+span {
+  color: #7171f7;
+  cursor: pointer;
+}
+
+P {
+  margin: 0px;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  top: 10px;
+}
+
+.fa-times {
+  font-size: 25px;
+}

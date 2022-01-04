@@ -1,0 +1,94 @@
+<div style="margin: 75px 30px 150px 30px">
+  <div class="pagetitle">{{ "LABEL.TODOLIST_EMP" | translate }}</div>
+  <div class="cust-grid">
+    <div
+      *ngFor="let item of mobel; let i = index"
+      [attr.data-index]="i"
+      class="line box{{ i + 1 }} numbershow"
+    >
+      <div class="title">
+        {{ item.leave_trans_type_name }}
+      </div>
+      <div *ngIf="item.days === '' || item.days === '0'" class="number">
+        <span
+          *ngIf="item.leave_trans_type_name === 'ลากิจ(หักเงิน)'"
+          class="not-all"
+        >
+          ลากิจ (หักเงิน) หมดแล้ว
+        </span>
+        <span *ngIf="item.leave_trans_type_name === 'ลากิจ'" class="not-all">
+          ลากิจหมดแล้ว
+        </span>
+        <span *ngIf="item.leave_trans_type_name === 'ลาป่วย'" class="not-all">
+          ลาป่วยหมดแล้ว
+        </span>
+        <span
+          *ngIf="item.leave_trans_type_name === 'ลาพักร้อน'"
+          class="not-all"
+        >
+          ลาพักร้อนหมดแล้ว
+        </span>
+      </div>
+      <div *ngIf="item.days !== '' && item.days !== '0'" class="number">
+        <div class="not-all">เหลือ</div>
+        &nbsp;{{ item.days }}&nbsp;
+        <div class="not-all">วัน</div>
+      </div>
+      <div class="lates">
+        {{ "LABEL.LEAVERE_MARK" | translate }}
+      </div>
+    </div>
+
+    <!-- MyProfile -->
+    <div class="tag-container box">
+      <div class="tag">
+        <div class="tag-side tag-1-side">
+          <div class="tag-1-top"></div>
+          <div
+            class="tag-text tag-1-text"
+            style="background: url({{ imgcover }}) center center/cover;"
+          >
+            <div></div>
+            <div></div>
+            <div class="img-profile">
+              <img src="{{ profileimg }}" width="100%" />
+            </div>
+            <br />
+            <div class="profile" innerHtm>{{ username }}</div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
+        <div class="tag-side tag-1-side is-back">
+          <div class="tag-1-top"></div>
+          <div class="tag-text tag-1-text">
+            <div class="img-profile">
+              <img src="{{ profileimg }}" width="100%" />
+            </div>
+            <br />
+            <div class="name">{{ firstname }} {{ lastname }}</div>
+            <br />
+            <div class="card">
+              {{ email }}
+            </div>
+            <div class="card">
+              {{ remark }}
+            </div>
+            <div class="card view" (click)="viewprofile(uuid)">
+              view profile
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MyProfile -->
+    <!-- 
+    <div class="line box5">
+
+      <div class="profile" innerHtm>{{ "LABEL.MY_PROFILE" | translate }}</div>
+     
+    </div> -->
+  </div>
+  <!-- {{mobel | json }} -->
+</div>

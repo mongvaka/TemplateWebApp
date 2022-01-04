@@ -1,0 +1,55 @@
+[
+  {
+    "label": "MENU.MAIN_MENU_HOME",
+    "id": "MENU.MAIN_MENU_HOME",
+    "icon": "pi pi-fw pi-home"
+  },
+
+  {
+    "label": "MENU.MAIN_MENU_MIGRATION",
+    "id": "MENU.MAIN_MENU_MIGRATION",
+    "icon": "pi pi-fw pi-download",
+    "items": [
+      {
+        "label": "MENU.SUB_MENU_MIGRATION",
+        "id": "MENU.SUB_MENU_MIGRATION",
+        "icon": "pi pi-fw pi-angle-double-right"
+      },
+      {
+        "label": "MENU.SUB_MENU_MIGRATION_LOG",
+        "id": "MENU.SUB_MENU_MIGRATION_LOG",
+        "icon": "pi pi-fw pi-clock"
+      },
+      {
+        "label": "MENU.MENU_FUNCTION",
+        "id": "MENU.MENU_FUNCTION",
+        "icon": "pi pi-fw pi-clock",
+        "items": [
+          {
+            "label": "MENU.SUB_MENU_CREATE_DUMMY",
+            "id": "MENU.SUB_MENU_CREATE_DUMMY",
+            "icon": ""
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "label": "MENU.MAIN_MENU_ADMINISTRATION",
+    "id": "MENU.MAIN_MENU_ADMINISTRATION",
+    "icon": "pi pi-fw pi-cog",
+    "items": [
+      {
+        "label": "MENU.SUB_MENU_SYS_USER_TABLE",
+        "id": "MENU.SUB_MENU_SYS_USER_TABLE",
+        "icon": "pi pi-fw pi-user"
+      },
+      {
+        "label": "MENU.SUB_MENU_SYS_ROLE_TABLE",
+        "id": "MENU.SUB_MENU_SYS_ROLE_TABLE",
+        "icon": "pi pi-fw pi-users"
+      }
+    ]
+  }
+]

@@ -1,0 +1,178 @@
+<div style="display: flex">
+  <div class="nav" [class.close-mian-menu]="closemenu">
+    <div class="menu-left" [class.close-mian-menu]="closemenu">
+      <div class="menu-left-nav" [class.close-mian-menu]="closemenu">
+        <div
+          (click)="open()"
+          class="bar-sidemenu"
+          style="
+            position: fixed;
+            background-color: #71c2fc;
+            width: 110px;
+            justify-content: center;
+            color: #fff;
+            z-index: 1000;
+          "
+        >
+          ICE-FAC
+        </div>
+        <div (click)="open()" class="bar-sidemenu"></div>
+
+        <button class="cust-btn-menu cust-border" (click)="sidemenu('0')">
+          <b></b>
+          <b></b>
+          <i class="fas fa-house-damage"></i>
+          Home
+        </button>
+        <button
+          id="HRM"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('1')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-user-friends"></i>
+          {{ "LABEL.HRM" | translate }}
+        </button>
+        <button
+          id="INVENTORY"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('2')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-boxes"></i>
+          {{ "LABEL.INVENTORY" | translate }}
+        </button>
+        <button
+          id="LOGISTIC"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('3')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-shipping-fast"></i>
+          {{ "LABEL.LOGISTIC" | translate }}
+        </button>
+        <button
+          id="PURCHASE"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('4')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-shopping-cart"></i>
+          {{ "LABEL.PURCHASE" | translate }}
+        </button>
+        <button
+          id="CRM"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('5')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-tasks"></i>
+          {{ "LABEL.CRM" | translate }}
+        </button>
+        <button
+          id="MRP"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('6')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-pallet"></i>
+          {{ "LABEL.MRP" | translate }}
+        </button>
+        <button
+          id="MAINTENANCE"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('7')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-tools"></i>
+          {{ "LABEL.MAINTENANCE" | translate }}
+        </button>
+        <button
+          id="BUGETING"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('8')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-money-check-alt"></i>
+          {{ "LABEL.BUGETING" | translate }}
+        </button>
+        <button
+          id="ACCOUNT"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('9')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-user-alt"></i>
+          {{ "LABEL.ACCOUNT" | translate }}
+        </button>
+        <button
+          id="ADMINISTRATOR"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('10')"
+        >
+          <b></b>
+          <b></b>
+          <i class="fas fa-user-shield"></i>
+          {{ "LABEL.ADMINISTRATOR" | translate }}
+        </button>
+        <button
+          id="SETUP"
+          class="cust-btn-menu cust-border"
+          (click)="sidemenu('11')"
+        >
+          <b></b>
+          <i class="fas fa-cog"></i>
+          {{ "LABEL.SETUP" | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="menu-left-2" [class.menu-left-2-clone]="menuLeft2">
+    <!-- <div style="height: 60px"></div> -->
+    <div (click)="close()" class="b-sidemenu menu-w">
+      <i
+        class="fas fa-arrow-left"
+        style="font-size: 13px; margin-left: 20px; color: gray"
+      ></i>
+      <p id="titleSubMenu" style="margin-left: 15px; color: gray">
+        {{ "LABEL.MENU" | translate }}
+      </p>
+    </div>
+    <div
+      style="
+        position: fixed;
+        height: 100vh;
+        background-color: #fff;
+        width: 200px;
+        margin-top: 60px;
+        box-shadow: rgba(99, 99, 99, 0.56) 0px 2px 8px -4px;
+      "
+    >
+      <div
+        style="
+          margin: 0px 0px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          height: 89.9%;
+        "
+      >
+        <p-panelMenu
+          class="submenu"
+          aria-expanded="true"
+          [model]="mian"
+          [style]="{ width: '100%', margin: '5px 0px' }"
+          [multiple]="false"
+        ></p-panelMenu>
+      </div>
+    </div>
+  </div>
+</div>

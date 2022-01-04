@@ -1,0 +1,56 @@
+.k-input {
+  padding: 9px 9px;
+  border-radius: 4px;
+  color: $font_color;
+  border: 2px solid #d4d4d4;
+}
+.p-flex-column {
+  line-height: 2 !important;
+}
+.p-inputtext{
+  padding: 3.4px 8px !important;
+}
+.p-dropdown{
+  border: 2px solid #d4d4d4 !important;
+}
+.k-select {
+  padding: 0px 0px;
+  border: 1px solid #dde1e5;
+  border-radius: 5px;
+}
+.k-input-s {
+  border-radius: 2px;
+  padding: 3px 2px;
+  border: 1px solid #dde1e5;
+}
+.k-input:focus-visible {
+  border: 2px solid $primary;
+  box-shadow: 0 0 0 0.15rem rgb(13 110 253 / 25%);
+  outline: none;
+}
+.k-input-area {
+  height: 100px;
+}
+.k-input-err {
+  padding: 5px 7px;
+  border-radius: 2px;
+  border: 2px solid $danger;
+  // box-shadow: 0 0 0 0.10rem #ff9696;
+}
+.k-col-4 {
+  width: 49.36%;
+}
+.k-col-2 {
+  width: 24%;
+}
+.k-col-8 {
+  width: 100%;
+}
+
+.k-from {
+  display: flex;
+  justify-content: space-between;
+}
+input[type=text]:disabled {
+  background: #f0f2f5;
+}

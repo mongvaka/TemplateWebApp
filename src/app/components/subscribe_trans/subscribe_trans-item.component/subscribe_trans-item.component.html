@@ -1,0 +1,146 @@
+<div class="k-container-cm">
+  <div class="k-w-max none-print k-bw">
+    <div>
+      <p *ngIf="!isUpdateMode">
+        {{ "LABEL.SUBSCRIBE_TRANS" | translate }}
+        <i class="fas fa-chevron-right"></i> {{ "LABEL.CREATE" | translate }}
+      </p>
+      <p *ngIf="isUpdateMode">
+        {{ "LABEL.SUBSCRIBE_TRANS" | translate }}
+        <i class="fas fa-chevron-right"></i> {{ "LABEL.EDIT" | translate }}
+      </p>
+    </div>
+    <div class="cust-m-right-50"></div>
+  </div>
+  <div class="k-w-max cust-g-btn k-display-flex">
+    <div>
+      <cust-button
+        inputId="CANCEL"
+        icon="fas fa-chevron-circle-left"
+        [label]="'LABEL.BACK' | translate"
+        className="cust-btn-back"
+        [kisConfig]="buttonConfig"
+        (click)="onClose()"
+      ></cust-button>
+    </div>
+    <div class="cust-m-right-50">
+      <div class="cust-display-flex-space-between">
+        <cust-tiered-menu
+          [disabled]="!isUpdateMode"
+          inputId="INFO"
+          class="cust-p"
+          #info
+          [listmenu]="infoItems"
+          [label]="'LABEL.INFO' | translate"
+          icon="fas fa-info-circle"
+        ></cust-tiered-menu>
+        <cust-tiered-menu
+          [disabled]="!isUpdateMode"
+          inputId="ACTION"
+          class="cust-p"
+          #action
+          [listmenu]="actionItems"
+          [label]="'LABEL.ACTION' | translate"
+          icon="fas fa-cog"
+        ></cust-tiered-menu>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div class="k-card">
+    <div class="k-container-sm">
+      <div class="k-col-8">
+        <span class="h2">{{ "LABEL.GENERAL" | translate }}</span>
+      </div>
+      <br />
+      <div class="p-d-flex p-flex-wrap">
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label>{{ "LABEL.SUBSCRIBE_TABLE_UUID" | translate }} : </label>
+          <cust-dropdown
+            inputId="SUBSCRIBE_TABLE_UUID"
+            [(kisModel)]="model.subscribe_table_uuid"
+            [options]="subscribetableOptions"
+            [kisConfig]="DEFAULT_DROPDOWN"
+          ></cust-dropdown>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label>{{ "LABEL.FEATURE_TABLE_UUID" | translate }} : </label>
+          <cust-dropdown
+            inputId="FEATURE_TABLE_UUID"
+            [(kisModel)]="model.feature_table_uuid"
+            [options]="featuretableOptions"
+            [kisConfig]="DEFAULT_DROPDOWN"
+          ></cust-dropdown>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <br />
+  <div class="k-card">
+    <div class="k-container-sm">
+      <div class="k-col-8">
+        <span class="h2"> {{ "LABEL.SYSTEM" | translate }}</span>
+      </div>
+      <br />
+      <div class="p-d-flex p-flex-wrap">
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label>{{ "LABEL.CREATE_BY" | translate }} : </label>
+          <cust-input-text
+            inputId="CREATE_BY"
+            [(kisModel)]="model.create_by"
+            [kisConfig]="DEFAULT_INPUTTEXT"
+            [disabled]="true"
+          ></cust-input-text>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label>{{ "LABEL.CREATE_DATE" | translate }} : </label>
+          <cust-input-text
+            inputId="CREATE_DATE"
+            [(kisModel)]="model.create_date"
+            [kisConfig]="SYSTEM_INPUTTEXT"
+            [disabled]="true"
+          ></cust-input-text>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label>{{ "LABEL.UPDATE_BY" | translate }} : </label>
+          <cust-input-text
+            inputId="UPDATE_BY"
+            [(kisModel)]="model.update_by"
+            [kisConfig]="DEFAULT_INPUTTEXT"
+            [disabled]="true"
+          ></cust-input-text>
+        </div>
+        <div class="p-d-flex p-flex-column ele-box-w-25">
+          <label>{{ "LABEL.UPDATE_DATE" | translate }} : </label>
+          <cust-input-text
+            inputId="UPDATE_DATE"
+            [(kisModel)]="model.update_date"
+            [kisConfig]="SYSTEM_INPUTTEXT"
+            [disabled]="true"
+          ></cust-input-text>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+  <br />
+  <div class="k-display-block">
+    <div class="k-layout-l">
+      <cust-button
+        inputId="CANCEL"
+        [label]="'LABEL.CANCEL' | translate"
+        className="cust-btn-outline-primary p-m-2"
+        [kisConfig]="buttonConfig"
+        (click)="onClose()"
+      ></cust-button>
+      <cust-button
+        inputId="SAVE"
+        [label]="'LABEL.SAVE' | translate"
+        className="cust-btn-primary k-ml p-m-2"
+        [kisConfig]="buttonConfig"
+        (formValidate)="onSave($event)"
+      ></cust-button>
+    </div>
+  </div>
+</div>

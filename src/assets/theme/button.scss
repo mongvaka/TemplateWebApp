@@ -1,0 +1,134 @@
+$shadow-btn: rgba(99, 99, 99, 0.28) 5px 5px 5px 0px;
+$shadow-btn-hover: rgba(99, 99, 99, 0.53) 5px 5px 5px 0px;
+
+.cust-g-btn {
+  border-radius: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+.cust-search {
+  padding: 3px 20px;
+  border: 1px solid #dde1e5;
+}
+
+.cust-btn-primary:hover {
+  cursor: pointer;
+  border: 2px solid $primary_hover;
+  background-color: $primary_hover;
+  box-shadow: $shadow-btn-hover;
+  transform: scale(1.2);
+}
+.cust-btn-primary:active {
+  transform: scale(1.5);
+  opacity: 0.1;
+}
+
+.cust-btn-danger:hover {
+  border: 2px solid $danger_hover;
+  background-color: $danger_hover;
+  box-shadow: $shadow-btn-hover;
+  transform: scale(1.2);
+}
+.cust-btn-danger:active {
+  transform: scale(1.4);
+  opacity: 0.1;
+}
+
+.cust-btn-outline-primary:hover {
+  background-color: $light_hover;
+  box-shadow: rgba(99, 99, 99, 0.23) 5px 5px 5px 0px;
+}
+
+.cust-btn-back {
+  cursor: pointer;
+  border: 2px solid $primary;
+  background-color: #fff;
+  color: $primary;
+  border-radius: 4px;
+  padding: 7px 10px;
+  transition: 0.2s;
+}
+.cust-btn-back:hover {
+  border: 2px solid #d9e5ff;
+  background-color: #d9e5ff;
+  box-shadow: rgba(99, 99, 99, 0.23) 5px 5px 5px 0px;
+}
+
+.cust-btn-outline-danger:hover {
+  background-color: $danger_hover;
+  box-shadow: $shadow-btn-hover;
+}
+.cust-btn-success:hover {
+  cursor: pointer;
+  border: 2px solid $success_hover;
+  background-color: $success_hover;
+  color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.23) 5px 5px 5px 0px;
+}
+
+.cust-btn-file:hover {
+  background-color: #fffda2;
+  box-shadow: rgba(99, 99, 99, 0.23) 5px 5px 5px 0px;
+}
+
+.cust-border {
+  border: 1px solid rgba(255, 154, 154, 0);
+}
+
+@mixin btn($color) {
+  padding: 7px 20px;
+  border: 2px solid $color;
+  background-color: $color;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: $shadow-btn;
+}
+
+.cust-btn-primary {
+  @include btn($color: $primary);
+}
+.cust-btn-danger {
+  @include btn($color: $danger);
+}
+.cust-btn-file {
+  @include btn($color: $file);
+}
+.cust-btn-success {
+  @include btn($color: $success);
+}
+
+@mixin btn-outline($theme: 7px 20px, $color: #1a73e8) {
+  cursor: pointer;
+  padding: $theme;
+  border-radius: 4px;
+  border: 2px solid $color;
+  color: $color;
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: $light;
+  transition: 0.2s;
+}
+
+.cust-btn-outline-primary {
+  @include btn-outline($theme: 7px 20px, $color: $primary);
+}
+.cust-btn-outline-danger {
+  @include btn-outline($theme: 7px 20px, $color: $danger);
+}
+
+.cust-btn-outline-primary-sm {
+  @include btn-outline($theme: 3px 15px, $color: $primary);
+}
+.cust-btn-outline-success {
+  @include btn-outline($theme: 7px 20px, $color: $success);
+}
+.cust-btn-outline-file {
+  @include btn-outline($theme: 7px 20px, $color: $file);
+}
+.cust-btn-outline-success:hover {
+  background-color: #6da1749a;
+}

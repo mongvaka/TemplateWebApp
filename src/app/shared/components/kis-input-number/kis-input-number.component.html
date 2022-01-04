@@ -1,0 +1,15 @@
+<p-inputNumber
+  [inputId]="bindingInputId"
+  [(ngModel)]="kisModel"
+  [mode]="bindingMode"
+  [max]="bindingMax"
+  [min]="bindingMin"
+  [minFractionDigits]="bindingMinFractionDigits"
+  [maxFractionDigits]="bindingMaxFractionDigits"
+  [useGrouping]="bindingUseGrouping"
+  [suffix]="bindingSuffix"
+  (onBlur)="kisModelChange.emit(kisModel)"
+  (keyup.enter)="kisModelChange.emit(kisModel)"
+  [readonly]="getReadonly(bindingInputId)"
+  [disabled]="bindingDisabled"
+></p-inputNumber>

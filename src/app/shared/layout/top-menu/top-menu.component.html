@@ -1,0 +1,71 @@
+<div class="nav-top">
+  <div></div>
+  <!-- logo -->
+  <div style="margin-top: 5px">
+    <!-- <link type="img" src="/src/assets/images/logo.png" /> -->
+  </div>
+  <!-- end logo -->
+  <!-- <button
+    *ngIf="check === true"
+    class="fullscreen"
+    (click)="openFullscreen(); close()"
+  >
+    <i class="fas fa-expand"></i>
+  </button>
+  <button
+    *ngIf="check === false"
+    class="fullscreen"
+    (click)="closeFullscreen(); close()"
+  >
+    <i class="fas fa-compress"></i>
+  </button> -->
+
+  
+  <div class="profile" >
+    <input class="search-input" placeholder="Search page">
+    <div class="noti">
+      <i class="fas fa-bell"></i>
+    </div>
+
+    <div
+      (click)="menuProfile()"
+      class="imgprofile"
+      style="background: url({{ userImage }}) center center/cover;"
+    ></div>
+
+    <div class="menu" (click)="close()" [class.menu-close]="mProfile">
+      <div class="menu-list">
+        <li style="display: flex; padding: 5px 10px;">
+          <div style=" line-height: 18pt">
+            <p>{{ username }}</p>
+            <p style="font-size: 8px; color: rgb(36, 136, 250);">View profile</p>
+            <!-- <small style="font-size: 0.6rem; color: rgb(255, 169, 169)">
+               fggg
+            </small> -->
+          </div>
+        </li>
+        <hr
+          style="
+            padding: 0;
+            margin: 4px;
+            background-color: #e0e0e0;
+            border: 0px solid #111;
+            height: 1px;
+          "
+        />
+        <li>
+          <div class="icon">
+            <i class="fas fa-cog"></i>
+          </div>
+          {{ "LABEL.SETTING" | translate }}
+        </li>
+        <li (click)="logout()">
+          <div class="icon">
+            <i class="fas fa-sign-out-alt"></i>
+          </div>
+          {{ "LABEL.LOGOUT" | translate }}
+        </li>
+      </div>
+    </div>
+  </div>
+</div>

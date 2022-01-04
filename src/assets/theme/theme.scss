@@ -1,0 +1,237 @@
+$primary: #42b6ff;
+$primary_hover: #3783b3;
+$light: #ffffff;
+$light_hover: rgb(231, 237, 253);
+$bg-color: #f0f2f5;
+$success: #488e48;
+$success_hover: #59b259;
+$blue: #1a73e8;
+$color_min: #ff9898;
+$danger: #fdd244f8;
+$danger_hover: #fdd244f8;
+$font_color: rgb(117, 117, 117);
+$file: #fdd244f8;
+
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,700;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Train+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  // font-family: "Prompt", sans-serif;
+  //  color: rgb(117, 117, 117);
+  font-family: "Varela Round", sans-serif;
+  font-size: 14px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+label {
+  color: rgb(117, 117, 117);
+}
+
+@import "layout.scss";
+@import "button.scss";
+@import "table.scss";
+@import "print.scss";
+@import "icon.scss";
+@import "card.scss";
+@import "input.scss";
+@import "alert.scss";
+@import "collapse.scss";
+@import "shadow.scss";
+@import "loadding.scss";
+@import "modal.scss";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+input {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+input,
+select:focus-visible {
+  outline: none;
+}
+
+p {
+  color: rgb(117, 117, 117);
+}
+.text-footer {
+  color: rgb(255, 125, 125) !important;
+}
+.h1 {
+  font-size: 30px;
+}
+.h2 {
+  font-size: 23px;
+  color: rgb(117, 117, 117);
+}
+.ngx-pagination .current {
+  background-color: red;
+}
+
+.k-pagination {
+  padding: 0px;
+}
+table {
+  width: 100%;
+}
+th {
+  padding: 0px;
+}
+.k-row-2 {
+  line-height: 25pt;
+}
+
+.k-m-2 {
+  margin: 10px 0px;
+}
+
+.k-title {
+  margin: 20px 0px;
+  font-size: 600;
+  color: #111;
+}
+.k-bw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.k-disabled {
+  background-color: $bg-color;
+}
+.k-text-center {
+  text-align: center;
+}
+.k-p-relative {
+  position: relative;
+}
+.k-p-2 {
+  padding: 0px 10px;
+}
+.k-li {
+  cursor: pointer;
+  padding: 7px;
+}
+.cust-please-specify {
+  color: #a3a3a3;
+  font-size: 10px;
+}
+.cust-please-specify-err {
+  color: #fb3f4a;
+}
+
+.cust-info-action {
+  display: none;
+}
+
+.cust-font-color {
+  color: $font_color;
+}
+
+.cust-dropdow {
+  font-size: 13px;
+  padding: 10px;
+  list-style: none;
+  transition: 0.2s;
+  color: $font_color;
+}
+.w-100 {
+  width: 100% !important;
+}
+.w-75 {
+  width: 75% !important;
+}
+.w-70 {
+  width: 70% !important;
+}
+.w-50 {
+  width: 50% !important;
+}
+.w-30 {
+  width: 30% !important;
+}
+.w-25 {
+  width: 25% !important;
+}
+.w-15 {
+  width: 25% !important;
+}
+.w-10 {
+  width: 10% !important;
+}
+.w-5 {
+  width: 5% !important;
+}
+.ele-box-w-100 {
+  @extend .w-100;
+  padding: 0.25rem !important;
+  position: relative;
+  width: 100% !important;
+}
+.ele-box-w-75 {
+  @extend .w-75;
+  padding: 0.25rem !important;
+  position: relative;
+  width: 75% !important;
+}
+.ele-box-w-70 {
+  @extend .w-70;
+  padding: 0.25rem !important;
+  position: relative;
+  width: 70% !important;
+}
+.ele-box-w-50 {
+  @extend .w-50;
+  padding: 0.25rem !important;
+  position: relative;
+  width: 100% !important;
+}
+.ele-box-w-25 {
+  @extend .w-25;
+  padding: 0.25rem !important;
+  position: relative;
+  width: 25% !important;
+}
+.ele-box-w-15 {
+  @extend .w-15;
+  padding: 0.25rem !important;
+  position: relative;
+  width: 15% !important;
+}
+ivz-textarea:nth-child(3) {
+  margin-top: 0.3rem;
+}
+.ele-box-w-10 {
+  @extend .w-10;
+  padding: 0.25rem !important;
+  position: relative;
+  width: 10% !important;
+}
+
+.cust-m-right-50 {
+  margin-right: 0px;
+}
+// .cust-p {
+//   position: relative;
+// }
+
+.cust-p-c-2 {
+  padding: 10px 0px;
+}
+.cust-title {
+  text-align: center;
+  font-size: 23px;
+  margin: 0;
+  padding: 0px;
+}

@@ -1,0 +1,71 @@
+.cust-container-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 6;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.425);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.cust-container-modal-close {
+  visibility: visible;
+  opacity: 1;
+}
+
+.px400 {
+  height: 400px;
+}
+.px500 {
+  height: 500px;
+}
+.px600 {
+  height: 600px;
+}
+.px700 {
+  height: 700px;
+}
+.pxauto {
+  height: auto;
+}
+
+.cust-modal-card {
+  background-color: rgb(255, 255, 255);
+  width: 0px;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  padding: 13px;
+  transition: 0.4s;
+}
+.cust-modal-card-close {
+  width: 600px;
+}
+.cust-modal-from {
+  padding: 10px 40px;
+  padding-bottom: 30px;
+}
+.kisModal {
+  display: none;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+.kisSubModal {
+  width: 70%;
+  height: auto;
+  background-color: rgb(209, 209, 209);
+}
