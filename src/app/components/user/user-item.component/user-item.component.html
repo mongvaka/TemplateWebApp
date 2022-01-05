@@ -19,7 +19,7 @@
         icon="fas fa-chevron-circle-left"
         [label]="'LABEL.BACK' | translate"
         className="cust-btn-back"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (click)="onClose()"
       ></cust-button>
     </div>
@@ -58,52 +58,52 @@
           <label>{{ "LABEL.USER_NAME" | translate }} : </label>
           <cust-input-text
             inputId="USER_NAME"
-            [(kisModel)]="model.user_name"
-            [kisConfig]="DEFAULT_INPUTTEXT"
+            [(CustModel)]="model.user_name"
+            [CustConfig]="DEFAULT_INPUTTEXT"
           ></cust-input-text>
         </div>
         <div class="p-d-flex p-flex-column ele-box-w-25">
           <label>{{ "LABEL.USER_PASSWORD" | translate }} : </label>
           <cust-input-text
             inputId="USER_PASSWORD"
-            [(kisModel)]="model.user_password"
-            [kisConfig]="DEFAULT_INPUTTEXT"
+            [(CustModel)]="model.user_password"
+            [CustConfig]="DEFAULT_INPUTTEXT"
           ></cust-input-text>
         </div>
         <div class="p-d-flex p-flex-column ele-box-w-25">
           <label>{{ "LABEL.ROLE_UUID" | translate }} : </label>
           <cust-dropdown
             inputId="ROLE_UUID"
-            [(kisModel)]="model.role_uuid"
+            [(CustModel)]="model.role_uuid"
             [options]="roleOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
           ></cust-dropdown>
         </div>
         <div class="p-d-flex p-flex-column ele-box-w-25">
           <label>{{ "LABEL.EMPLOYEE_UUID" | translate }} : </label>
           <cust-dropdown
             inputId="EMPLOYEE_UUID"
-            [(kisModel)]="model.employee_uuid"
+            [(CustModel)]="model.employee_uuid"
             [options]="employeeOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
           ></cust-dropdown>
         </div>
         <div class="p-d-flex p-flex-column ele-box-w-25">
           <label>{{ "LABEL.SUBSCRIBE_NAME" | translate }} : </label>
           <cust-dropdown
             inputId="SUBSCRIBE_NAME"
-            [(kisModel)]="model.subscribe_uuid"
+            [(CustModel)]="model.subscribe_uuid"
             [options]="subscribetableOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
           ></cust-dropdown>
         </div>
         <div class="p-d-flex p-flex-column ele-box-w-25">
           <label>{{ "LABEL.LANGUAGE" | translate }} : </label>
           <cust-dropdown
             inputId="LANGUAGE"
-            [(kisModel)]="model.languageid"
+            [(CustModel)]="model.languageid"
             [options]="sysLanguageOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
           ></cust-dropdown>
         </div>
       </div>
@@ -122,8 +122,8 @@
           <label>{{ "LABEL.CREATE_BY" | translate }} : </label>
           <cust-input-text
             inputId="CREATE_BY"
-            [(kisModel)]="model.create_by"
-            [kisConfig]="DEFAULT_INPUTTEXT"
+            [(CustModel)]="model.create_by"
+            [CustConfig]="DEFAULT_INPUTTEXT"
             [disabled]="true"
           ></cust-input-text>
         </div>
@@ -131,8 +131,8 @@
           <label>{{ "LABEL.CREATE_DATE" | translate }} : </label>
           <cust-input-text
             inputId="CREATE_DATE"
-            [(kisModel)]="model.create_date"
-            [kisConfig]="SYSTEM_INPUTTEXT"
+            [(CustModel)]="model.create_date"
+            [CustConfig]="SYSTEM_INPUTTEXT"
             [disabled]="true"
           ></cust-input-text>
         </div>
@@ -140,8 +140,8 @@
           <label>{{ "LABEL.UPDATE_BY" | translate }} : </label>
           <cust-input-text
             inputId="UPDATE_BY"
-            [(kisModel)]="model.update_by"
-            [kisConfig]="DEFAULT_INPUTTEXT"
+            [(CustModel)]="model.update_by"
+            [CustConfig]="DEFAULT_INPUTTEXT"
             [disabled]="true"
           ></cust-input-text>
         </div>
@@ -149,8 +149,8 @@
           <label>{{ "LABEL.UPDATE_DATE" | translate }} : </label>
           <cust-input-text
             inputId="UPDATE_DATE"
-            [(kisModel)]="model.update_date"
-            [kisConfig]="SYSTEM_INPUTTEXT"
+            [(CustModel)]="model.update_date"
+            [CustConfig]="SYSTEM_INPUTTEXT"
             [disabled]="true"
           ></cust-input-text>
         </div>
@@ -165,14 +165,14 @@
         inputId="CANCEL"
         [label]="'LABEL.CANCEL' | translate"
         className="cust-btn-outline-primary p-m-2"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (click)="onClose()"
       ></cust-button>
       <cust-button
         inputId="SAVE"
         [label]="'LABEL.SAVE' | translate"
         className="cust-btn-primary k-ml p-m-2"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (formValidate)="onSave($event)"
       ></cust-button>
     </div>

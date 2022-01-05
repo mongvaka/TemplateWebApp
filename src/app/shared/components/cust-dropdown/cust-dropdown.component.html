@@ -1,0 +1,39 @@
+<p-dropdown
+  [style]="{ width: '100%' }"
+  [inputId]="bindingInputId"
+  [(options)]="bindingOptions"
+  [(ngModel)]="bindingModel"
+  [placeholder]="bindingPlaceholder"
+  [itemSize]="bindingItemSize"
+  [filter]="bindingFilter"
+  [autoDisplayFirst]="bindingAutoDisplayFirst"
+  [showClear]="bindingShowClear"
+  [readonly]="getReadonly(bindingInputId)"
+  filterBy="label"
+  (onChange)="this.CustModelChange.next(CustModel)"
+  (onFocus)="onFocus()"
+  class="cust-dropdown"
+>
+  <ng-template let-item pTemplate="item">
+    <div id="{{ item.value }}">{{ item.label }}</div>
+  </ng-template>
+</p-dropdown>
+
+<!-- <p-dropdown
+  [inputId]="bindingInputId"
+  [(options)]="bindingOptions"
+  [(ngModel)]="bindingModel"
+  [placeholder]="bindingPlaceholder"
+  [itemSize]="bindingItemSize"
+  [filter]="bindingFilter"
+  [autoDisplayFirst]="bindingAutoDisplayFirst"
+  [showClear]="bindingShowClear"
+  [readonly]="getReadonly(bindingInputId)"
+  filterBy="label"
+  (onChange)="this.CustModelChange.next(CustModel)"
+  (onFocus)="onFocus()"
+>
+  <ng-template let-item pTemplate="item">
+    <div id="{{ item.value }}">{{ item.label }}</div>
+  </ng-template>
+</p-dropdown> -->

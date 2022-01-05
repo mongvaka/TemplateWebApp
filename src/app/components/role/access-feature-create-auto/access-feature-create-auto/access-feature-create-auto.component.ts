@@ -55,7 +55,7 @@ export class AccessFeatureCreateAutoComponent
     this.id = this.currentActivatedRoute.snapshot.params.id;
   }
   @Output() modalclose = new EventEmitter<boolean>();
-  @Input('kisclick') modal1: boolean;
+  @Input('Custclick') modal1: boolean;
   close() {
     this.modal1 = false;
     this.modalclose.emit(this.modal1);

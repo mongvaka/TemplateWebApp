@@ -1,0 +1,14 @@
+<p-multiSelect
+  [inputId]="bindingInputId"
+  [(ngModel)]="bindingModel"
+  [itemSize]="bindingItemSize"
+  [filter]="bindingFilter"
+  [autoDisplayFirst]="bindingAutoDisplayFirst"
+  [showClear]="bindingShowClear"
+  [panelStyle]="bindingPanelStyle"
+  [defaultLabel]="bindingDefaultLabel"
+  [maxSelectedLabels]="bindingMaxSelectedLabels"
+  [readonly]="getReadonly(bindingInputId)"
+  [options]="bindingOptions"
+  (onChange)="CustModelChange.emit($event.value)"
+></p-multiSelect>

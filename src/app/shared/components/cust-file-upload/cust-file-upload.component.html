@@ -1,0 +1,175 @@
+<!-- <cust-input-text inputId="BOX" [(ivzModel)]="testModel" [ivzConfig]="DEFAULT_INPUTTEXT" required></cust-input-text> -->
+<div class="p-d-flex p-flex-column">
+  <div class="p-d-flex p-flex-wrap">
+    <div class="p-d-flex p-flex-column flex-grow-1">
+      <cust-input-text
+        inputId="BOX"
+        [(CustModel)]="fileName"
+        [ivzConfig]="DEFAULT_INPUTTEXT"
+        [disabled]="true"
+      ></cust-input-text>
+      <input
+        inputId="SELECT_FILE"
+        *ngIf="!isMultiple"
+        #inputfile
+        type="file"
+        [accept]="acceptFormat"
+        style="display: none"
+        (change)="changeListener($event)"
+      />
+    </div>
+    <div class="p-d-flex p-flex-row">
+      <cust-button
+        icon="pi pi-upload"
+        className="cust-btn-primary k-ml p-m-2"
+        [ivzConfig]="ICON"
+        [disabled]="!allowBrowse"
+        (click)="onBrowse($event)"
+      >
+      </cust-button>
+      <cust-button
+        icon="pi pi-download"
+        className="cust-btn-primary k-ml p-m-2"
+        [CustConfig]="ICON"
+        [disabled]="isUndefinedOrZeroLength(displayFile.base64)"
+        *ngIf="visibleDownloadBtn"
+        (click)="onFileDownload(displayFile)"
+      >
+      </cust-button>
+      <p-dialog
+        [header]="fileName"
+        class="img-preview"
+        [resizable]="false"
+        [(visible)]="isDialogShow"
+        (onShow)="onDialogShown()"
+      >
+        <iframe
+          id="imgPreview"
+          src=""
+          frameborder="0"
+          [hidden]="!isPictureType"
+        ></iframe>
+        <embed
+          [hidden]="!isDocument"
+          style="background-color: white"
+          id="documentPreview"
+          [width]="iframeWidth"
+          [height]="iframeHeight"
+          src=""
+          type="application/pdf"
+        />
+      </p-dialog>
+      <cust-button
+        icon="pi pi-eye"
+        className="cust-primary-btn p-ml-2"
+        [ivzConfig]="ICON"
+        (click)="onPreviewFile()"
+        [disabled]="!displayFile.isPreviewable"
+        *ngIf="displayFile.isPreviewable && visiblePreviewBtn"
+      >
+      </cust-button>
+    </div>
+  </div>
+  <!-- <div>
+    <cust-textarea
+      inputId="REMARK"
+      [(ivzModel)]="fileDescription"
+      [ivzConfig]="DEFAULT_TEXTAREA"
+      (blur)="onDescriptionBlur($event)"
+      [disabled]="isView"
+    >
+    </cust-textarea>
+  </div> -->
+</div>
+<!-- <div class="p-d-flex p-jc-between no-margin no-padding">
+  <input
+    pInputText
+    type="text"
+    class="p-col"
+    readonly
+    id="BOX"
+    disabled="true"
+    [value]="!isUndefinedOrZeroLength(displayFile.fileDisplayName) ? displayFile.fileDisplayName : displayFile.fileName"
+  />
+  <cust-input-text inputId="BOX" [(ivzModel)]="testModel" [ivzConfig]="DEFAULT_INPUTTEXT" required></cust-input-text>
+  <input *ngIf="!isMultiple" #inputfile type="file" [accept]="acceptFormat" style="display: none" (change)="changeListener($event)" />
+  <button
+    pButton
+    class="p-col-2"
+    type="button"
+    icon="pi pi-upload"
+    style="display: inline-block; margin-left: 0.25rem"
+    [disabled]="!allowBrowse"
+    (click)="onBrowse($event)"
+  ></button>
+  <button
+    pButton
+    class="p-col-2"
+    type="button"
+    icon="pi pi-download"
+    style="display: inline-block; margin-left: 0.25rem"
+    [disabled]="isUndefinedOrZeroLength(displayFile.base64)"
+    *ngIf="visibleDownloadBtn"
+    (click)="onFileDownload(displayFile)"
+  ></button>
+  <button
+    pButton
+    class="p-col-2"
+    type="button"
+    icon="pi pi-eye"
+    style="display: inline-block; margin-left: 0.25rem"
+    [disabled]="!displayFile.isPreviewable"
+    *ngIf="!displayFile.isPreviewable && visiblePreviewBtn"
+  ></button>
+  <p-lightbox
+    id="LIGHTBOX_ATTACHMENT"
+    #lightboxOverlay
+    *ngIf="displayFile.isPreviewable"
+    type="content"
+    [blockScroll]="true"
+    (keyup.esc)="onCloseOverlay($event)"
+  >
+    <a>
+      <button
+        pButton
+        type="button"
+        icon="pi pi-eye"
+        style="display: inline-block; margin-left: 0.25rem"
+        [disabled]="!displayFile.isPreviewable"
+        *ngIf="displayFile.isPreviewable && visiblePreviewBtn"
+        (click)="onPreviewFile()"
+      ></button>
+    </a>
+
+    <button pButton type="button" icon="pi pi-times" (click)="onCloseOverlay($event)" class="btn-close-att"></button>
+    <iframe id="imgPreview" src="" frameborder="0" [hidden]="!isPictureType"></iframe>
+    <embed
+      [hidden]="!isDocument"
+      style="background-color: white"
+      id="documentPreview"
+      [width]="iframeWidth"
+      [height]="iframeHeight"
+      src=""
+      type="application/pdf"
+    />
+
+    <div *ngIf="!hasContent" style="background-color: white">
+      <span>Content not available.</span>
+    </div>
+  </p-lightbox>
+  <div *ngIf="!isMultiple && showDescription" class="p-grid p-col-12 p-justify-start i-fieldset-container ui-fluid">
+    <div class="p-grid p-col-12 p-xl-12 p-lg-12 p-sm-12 p-dir-col i-field-container ui-fluid">
+      <label>{{ 'LABEL.FILE_DESCRIPTION' | translate }} : </label>
+      <textarea
+        [rows]="3"
+        [cols]="50"
+        pInputTextarea
+        autoResize="false"
+        (blur)="onDescriptionBlur($event)"
+        [disabled]="isView"
+        [(ngModel)]="fileDescription"
+      >
+      </textarea>
+    </div>
+  </div>
+</div> -->

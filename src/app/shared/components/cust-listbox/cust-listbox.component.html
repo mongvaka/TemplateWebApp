@@ -1,0 +1,14 @@
+<input
+  [id]="bindingInputId"
+  class="w-100 k-input"
+  [(ngModel)]="CustModel"
+  list="options"
+  oninput="console.log(this.value);"
+/>
+<datalist id="options">
+  <option
+    *ngFor="let data of bindingList"
+    label="{{ data.name }}"
+    value="{{ data.code }}"
+  ></option>
+</datalist>

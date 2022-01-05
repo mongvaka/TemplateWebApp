@@ -14,21 +14,21 @@
         icon="fas fa-chevron-circle-left"
         [label]="'LABEL.BACK' | translate"
         className="cust-btn-back "
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (click)="onBack()"
       ></cust-button>
       <cust-button
         inputId="PRINT"
         [label]="'LABEL.PRINT' | translate"
         className="cust-btn-outline-primary k-ml"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         onclick="window.print()"
       ></cust-button>
       <cust-button
         inputId="EXPORT_EXCEL"
         [label]="'LABEL.EXPORT_EXCEL' | translate"
         className="cust-btn-outline-primary k-ml"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (click)="exportToExcel(searchResult)"
       ></cust-button>
     </div>
@@ -37,7 +37,7 @@
         inputId="SAVE"
         [label]="'LABEL.CREATE' | translate"
         className="cust-btn-primary none-print k-ml"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (click)="onCreate()"
       ></cust-button>
     </div>

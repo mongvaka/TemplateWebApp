@@ -1,0 +1,8 @@
+<textarea
+  class="w-100 k-input k-input-area"
+  [id]="bindingInputId"
+  [(ngModel)]="bindingModel"
+  [maxlength]="bindingMaxlength"
+  [readonly]="getReadonly(bindingInputId)"
+  (blur)="CustModelChange.emit(CustModel)"
+></textarea>

@@ -246,8 +246,8 @@ export const InputTextConfig = {
 };
 export const InputNumberConfig = {
   GENERAL: {
-    kisReadonly: true,
-    kisModel: '01/01/2020',
+    CustReadonly: true,
+    CustModel: '01/01/2020',
   },
 };
 export const InputSwitchConfig = {

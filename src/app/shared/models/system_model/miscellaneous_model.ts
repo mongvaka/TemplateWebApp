@@ -1,17 +1,6 @@
 import { SearchCondition, SearchParameter } from './search_param_model';
-import {
-  //   RecordType,
-  //   ACTIONTYPE,
-  //   ColumnType,
-  //   SortType,
-  Operators,
-  //   Ordinal,
-  //RefType,
-  //   DocConVerifyType,
-  //   BracketType,
-} from '../../constants/constant';
+import { Operators } from '../../constants/constant';
 import { TranslateService } from '@ngx-translate/core';
-//import { DropDownService } from 'core/services/dropdown.service';
 import { Router } from '@angular/router';
 import {
   AccessMode,
@@ -461,10 +450,10 @@ export class DocConVerifyTypeModel {
   //public docConVerifyType?: DocConVerifyType;
   public refUUID?: string;
 }
-export class KisDropdownOnFocusModel {
+export class CustDropdownOnFocusModel {
   public inputId: string;
   public readonly?: boolean;
-  public kisModel?: any;
+  public CustModel?: any;
   public isLoadedOnFirstFocus?: boolean;
   public options?: SelectItems[];
 }

@@ -36,7 +36,7 @@ import {
   FieldAccessing,
   IRequest,
   ISubjectType,
-  KisDropdownOnFocusModel,
+  CustDropdownOnFocusModel,
   OrdinalModel,
   PathParamModel,
   RelatedKeyModel,
@@ -53,7 +53,7 @@ export class UIControllerService {
   public readonlySubject = new Subject<OrdinalModel>();
   public disabledSubject = new Subject<OrdinalModel>();
   public relatedSubject = new Subject<boolean>();
-  public ddlLoadFirstFocusSubject = new Subject<KisDropdownOnFocusModel[]>();
+  public ddlLoadFirstFocusSubject = new Subject<CustDropdownOnFocusModel[]>();
 
   public fullPageSubject = new Subject<boolean>();
   public finishSpinnerListSubject = new Subject<ISubjectType>();

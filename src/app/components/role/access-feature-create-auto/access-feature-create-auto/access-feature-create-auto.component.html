@@ -19,7 +19,7 @@
         icon="fas fa-chevron-circle-left"
         [label]="'LABEL.BACK' | translate"
         className="cust-btn-back"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (click)="onClose()"
       ></cust-button>
     </div>
@@ -39,9 +39,9 @@
           <label required>{{ "LABEL.EMPLOYEE_UUID" | translate }} : </label>
           <cust-dropdown
             inputId="EMPLOYEE_UUID"
-            [(kisModel)]="model.employee_uuid"
+            [(CustModel)]="model.employee_uuid"
             [options]="employeeOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
             required
           ></cust-dropdown>
         </div>
@@ -49,9 +49,9 @@
           <label required>{{ "LABEL.DEPARTMENT_UUID" | translate }} : </label>
           <cust-dropdown
             inputId="DEPARTMENT_UUID"
-            [(kisModel)]="model.department_uuid"
+            [(CustModel)]="model.department_uuid"
             [options]="departmentOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
             required
           ></cust-dropdown>
         </div>
@@ -59,9 +59,9 @@
           <label required>{{ "LABEL.POSITION_UUID" | translate }} : </label>
           <cust-dropdown
             inputId="POSITION_UUID"
-            [(kisModel)]="model.position_uuid"
+            [(CustModel)]="model.position_uuid"
             [options]="positionOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
             required
           ></cust-dropdown>
         </div>
@@ -70,9 +70,9 @@
           <label required>{{ "LABEL.DEPARTMENT_NEW" | translate }} : </label>
           <cust-dropdown
             inputId="DEPARTMENT_NEW"
-            [(kisModel)]="model.department_new"
+            [(CustModel)]="model.department_new"
             [options]="departmentnewOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
             required
           ></cust-dropdown>
         </div>
@@ -82,8 +82,8 @@
           </label>
           <cust-calendar
             inputId="TRANSFER_TRANS_DATE"
-            [(kisModel)]="model.transfer_trans_date"
-            [kisConfig]="DATE"
+            [(CustModel)]="model.transfer_trans_date"
+            [CustConfig]="DATE"
             required
           ></cust-calendar>
         </div>
@@ -91,8 +91,8 @@
           <label required>{{ "LABEL.EFFECTIVE_DATE" | translate }} : </label>
           <cust-calendar
             inputId="EFFECTIVE_DATE"
-            [(kisModel)]="model.effective_date"
-            [kisConfig]="DATE"
+            [(CustModel)]="model.effective_date"
+            [CustConfig]="DATE"
             required
           ></cust-calendar>
         </div>
@@ -100,9 +100,9 @@
           <label required>{{ "LABEL.DOCUMENT_STATUS" | translate }} : </label>
           <cust-dropdown
             inputId="DOCUMENT_STATUS"
-            [(kisModel)]="model.document_status_uuid"
+            [(CustModel)]="model.document_status_uuid"
             [options]="documentStatusOptions"
-            [kisConfig]="DEFAULT_DROPDOWN"
+            [CustConfig]="DEFAULT_DROPDOWN"
             required
           ></cust-dropdown>
         </div>
@@ -111,8 +111,8 @@
           <label>{{ "LABEL.REMARK" | translate }} : </label>
           <cust-textarea
             inputId="REMARK"
-            [(kisModel)]="model.remark"
-            [kisConfig]="DEFAULT_TEXTAREA"
+            [(CustModel)]="model.remark"
+            [CustConfig]="DEFAULT_TEXTAREA"
           ></cust-textarea>
         </div>
       </div>
@@ -127,7 +127,7 @@
       inputId="POST"
       [label]="'LABEL.POST' | translate"
       className="cust-btn-primary k-ml p-m-2"
-      [kisConfig]="buttonConfig"
+      [CustConfig]="buttonConfig"
       (formValidate)="onSaveAndClose($event)"
     ></cust-button>
     <div class="k-layout-l">
@@ -135,14 +135,14 @@
         inputId="CANCEL"
         [label]="'LABEL.CANCEL' | translate"
         className="cust-btn-outline-primary p-m-2"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (click)="onClose()"
       ></cust-button>
       <cust-button
         inputId="SAVE"
         [label]="'LABEL.OK' | translate"
         className="cust-btn-primary k-ml p-m-2"
-        [kisConfig]="buttonConfig"
+        [CustConfig]="buttonConfig"
         (formValidate)="onSave($event)"
       ></cust-button>
     </div>

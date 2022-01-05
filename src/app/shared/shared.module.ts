@@ -33,8 +33,8 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 import { SlideMenuModule } from 'primeng/slidemenu';
 
-import { KisStytemComponent } from './components/cust-stytem/cust-stytem.component';
-import { KisSelectRowComponent } from './components/cust-select-row/cust-select-row.component';
+import { CustStytemComponent } from './components/cust-stytem/cust-stytem.component';
+import { CustSelectRowComponent } from './components/cust-select-row/cust-select-row.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2OrderModule } from 'ng2-order-pipe';
@@ -46,58 +46,58 @@ import { PanelMenuModule } from 'primeng/panelmenu';
 import { FileUploadModule } from 'primeng/fileupload';
 import { PaginatorModule } from 'primeng/paginator';
 
-import { KisToastComponent } from './components/cust-toast/cust-toast.component';
+import { CustToastComponent } from './components/cust-toast/cust-toast.component';
 import { SubMenuComponent } from './layout/sub-menu/sub-menu.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { KisDataGridComponent } from './components/cust-dataGrid/cust-dataGrid.component';
+import { CustDataGridComponent } from './components/cust-dataGrid/cust-dataGrid.component';
 import { DataGridColumnPipe } from './pipes/dgColumn.pipe';
 import { DataDisplay } from './pipes/dataDisplay.pipe';
-import { KisBaseComponent } from './components/cust-base/cust-base';
-import { KisInputTextComponent } from './components/cust-input-text/cust-input-text';
-import { KisInputNumberComponent } from './components/cust-input-number/cust-input-number.component';
-import { KisCalendarComponent } from './components/cust-calendar/cust-calendar.component';
-import { KisDropdownComponent } from './components/cust-dropdown/cust-dropdown.component';
-import { KisMultiSelectComponent } from './components/cust-multi-select/cust-multi-select.component';
+import { CustBaseComponent } from './components/cust-base/cust-base';
+import { CustInputTextComponent } from './components/cust-input-text/cust-input-text';
+import { CustInputNumberComponent } from './components/cust-input-number/cust-input-number.component';
+import { CustCalendarComponent } from './components/cust-calendar/cust-calendar.component';
+import { CustDropdownComponent } from './components/cust-dropdown/cust-dropdown.component';
+import { CustMultiSelectComponent } from './components/cust-multi-select/cust-multi-select.component';
 
 import { ValidationDirective } from './directives/validation.directive';
 import { FormValidateDirective } from './directives/formValidate.directive';
 import { RequiredDirective } from './directives/required.directive';
 import { ViewOnlyDirective } from './directives/viewOnly.directive';
 import { ReadonlyDirective } from './directives/readonly.directive';
-import { KisAlertComponent } from './components/cust-alert/cust-alert.component';
-import { KisButtonComponent } from './components/cust-button/cust-button.component';
-import { KisInputSwitchComponent } from './components/cust-input-switch/cust-input-switch.component';
-import { KisListboxComponent } from './components/cust-listbox/cust-listbox.component';
-import { KisTextareaComponent } from './components/cust-textarea/cust-textarea.component';
-import { KisTieredMenuComponent } from './components/cust-tiered-menu/cust-tiered-menu.component';
-import { KisFileUploadComponent } from './components/cust-file-upload/cust-file-upload.component';
-import { KisLoadingComponent } from './components/cust-loading/cust-loading.component';
-import { KisModalComponent } from './components/cust-modal/cust-modal.component';
-import { KisFileExcelUploadComponent } from './components/cust-file-excel-upload/cust-file-excel-upload.component';
+import { CustAlertComponent } from './components/cust-alert/cust-alert.component';
+import { CustButtonComponent } from './components/cust-button/cust-button.component';
+import { CustInputSwitchComponent } from './components/cust-input-switch/cust-input-switch.component';
+import { CustListboxComponent } from './components/cust-listbox/cust-listbox.component';
+import { CustTextareaComponent } from './components/cust-textarea/cust-textarea.component';
+import { CustTieredMenuComponent } from './components/cust-tiered-menu/cust-tiered-menu.component';
+import { CustFileUploadComponent } from './components/cust-file-upload/cust-file-upload.component';
+import { CustLoadingComponent } from './components/cust-loading/cust-loading.component';
+import { CustModalComponent } from './components/cust-modal/cust-modal.component';
+import { CustFileExcelUploadComponent } from './components/cust-file-excel-upload/cust-file-excel-upload.component';
 const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
 
 const SHARED_MODULES = [TranslateModule];
 const COMPONENTS = [
-  KisBaseComponent,
-  KisInputTextComponent,
-  KisStytemComponent,
-  KisSelectRowComponent,
-  KisToastComponent,
-  KisDataGridComponent,
-  KisInputNumberComponent,
-  KisCalendarComponent,
-  KisDropdownComponent,
-  KisMultiSelectComponent,
-  KisAlertComponent,
-  KisButtonComponent,
-  KisInputSwitchComponent,
-  KisListboxComponent,
-  KisTextareaComponent,
-  KisTieredMenuComponent,
-  KisFileUploadComponent,
-  KisLoadingComponent,
-  KisModalComponent,
-  KisFileExcelUploadComponent,
+  CustBaseComponent,
+  CustInputTextComponent,
+  CustStytemComponent,
+  CustSelectRowComponent,
+  CustToastComponent,
+  CustDataGridComponent,
+  CustInputNumberComponent,
+  CustCalendarComponent,
+  CustDropdownComponent,
+  CustMultiSelectComponent,
+  CustAlertComponent,
+  CustButtonComponent,
+  CustInputSwitchComponent,
+  CustListboxComponent,
+  CustTextareaComponent,
+  CustTieredMenuComponent,
+  CustFileUploadComponent,
+  CustLoadingComponent,
+  CustModalComponent,
+  CustFileExcelUploadComponent,
 ];
 const LAYOUTS = [
   LeftMenuComponent,
@@ -171,7 +171,7 @@ const PRIMENG_MODULES = [
     ...PIPES,
     ...DIRECTIVE,
     ...LAYOUTS,
-    KisModalComponent,
+    CustModalComponent,
   ],
   entryComponents: [],
   providers: [],

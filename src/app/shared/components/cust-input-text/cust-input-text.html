@@ -1,0 +1,12 @@
+<input
+  [id]="bindingInputId"
+  class="w-100 k-input"
+  type="text"
+  [(ngModel)]="CustModel"
+  autocomplete="off"
+  (blur)="CustModelChange.emit(CustModel)"
+  (keyup.enter)="CustModelChange.emit(CustModel)"
+  [readonly]="getReadonly(bindingInputId)"
+  [maxlength]="bindingMaxlength"
+  [disabled]="bindingDisabled"
+/>
