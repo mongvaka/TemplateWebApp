@@ -134,8 +134,10 @@
     "DIVORCE": "divorce"
   },
   "LABEL": {
+    "EMAIL_ADDRESS": "Emial address",
     "CANCEL": "Cancel",
     "CREATE": "Create",
+    "LOGIN": "Login",
     "COUNTRY_CODE": "Country code",
     "COUNTRY_NAME": "Country name",
     "CREATE_BY": "Create by",

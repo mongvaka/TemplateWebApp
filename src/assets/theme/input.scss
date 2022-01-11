@@ -1,16 +1,20 @@
 .k-input {
-  padding: 9px 9px;
-  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 30px;
   color: $font_color;
-  border: 2px solid #d4d4d4;
+  font-size: large;
+  border: 2px solid #8b8b8b;
 }
 .p-flex-column {
   line-height: 2 !important;
 }
-.p-inputtext{
+.p-inputtext {
   padding: 3.4px 8px !important;
 }
-.p-dropdown{
+.p-dropdown {
   border: 2px solid #d4d4d4 !important;
 }
 .k-select {
@@ -51,6 +55,6 @@
   display: flex;
   justify-content: space-between;
 }
-input[type=text]:disabled {
+input[type="text"]:disabled {
   background: #f0f2f5;
 }

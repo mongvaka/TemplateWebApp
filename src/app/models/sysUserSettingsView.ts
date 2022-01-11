@@ -1,5 +1,5 @@
+import { SysUserBranchMappingView } from '.';
 import { AccessRightView } from './accessRightView';
-import { SysUserBranchMappingView } from './SysUserBranchMappingView';
 
 export class SysUserSettingsItemView {
   public id: string = null;

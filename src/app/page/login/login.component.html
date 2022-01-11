@@ -1,40 +1,49 @@
-<div class="conthiner-login">
-  <div class="detail box">
-    <div style="z-index: 100; color: #fff">
-      <!-- <div style="position: absolute; left: 20px; top: 20px; z-index: 1000; color: #fff;"> ICE-FAC </div> -->
-      <h5 style="font-size: 50px; color: #fff; text-align: center">
-        Lorem ipsum
-      </h5>
-      <br /><br />
-      <p style="color: #fff; text-align: center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo culpa,
-        perferendis itaque consectetur eaque, dolorem adipisci error rerum qui
-        odit iusto dolore quos voluptas tenetur quia officia deleniti quas iure.
-      </p>
+<div style="margin-top: 15%">
+  <div style="text-align: center; font-size: 50px; color: #2a2a2a">Login</div>
+
+  <div
+    style="padding-left: 35%; padding-right: 35%"
+    class="p-d-flex p-flex-wrap"
+  >
+    <div class="p-d-flex p-flex-column ele-box-w-100">
+      <label>{{ "LABEL.EMAIL_ADDRESS" | translate }} : </label>
+      <cust-input-text
+        inputId="EMAIL_ADDRESS"
+        [(CustModel)]="model.email_address"
+        [CustConfig]="DEFAULT_INPUTTEXT"
+      >
+      </cust-input-text>
+    </div>
+    <div class="p-d-flex p-flex-column ele-box-w-100">
+      <label>{{ "LABEL.BANK_NAME" | translate }} : </label>
+      <cust-input-text
+        inputId="EMAIL_ADDRESS"
+        [(CustModel)]="model.password"
+        [CustConfig]="DEFAULT_INPUTTEXT"
+      >
+      </cust-input-text>
     </div>
     <div
-      style="
-        z-index: 100;
-        position: absolute;
-        bottom: 10px;
-        display: flex;
-        justify-content: center;
-        color: #ffffff;
-      "
+      style="align-items: center; margin-top: 20px"
+      class="p-d-flex p-flex-column ele-box-w-100"
     >
-      <span class="list-memu">เกี่ยวกับ</span> &nbsp; | &nbsp;
-      <span class="list-memu">ศูนย์ความช่วยเหลือ</span> &nbsp; | &nbsp;
-      <span class="list-memu">ข้อตกลงการให้บริการ</span> &nbsp; | &nbsp;
-      <span class="list-memu">นโยบายความเป็นส่วนตัว</span> &nbsp; | &nbsp;
-      <span class="list-memu">นักพัฒนา</span> &nbsp; | &nbsp;
-      <span class="list-memu">© 2021 ICE - FAC</span>
+      <cust-button
+        inputId="LOGIN"
+        [label]="'LABEL.LOGIN' | translate"
+        className="cust-btn-primary k-ml p-m-2"
+        [CustConfig]="buttonConfig"
+      ></cust-button>
     </div>
-    <div class="t img">
-      <video autoplay muted loop style="height: 100%">
-        <source src="../../../assets/images/People - 84973.mp4" />
-      </video>
+    <div
+      style="align-items: center"
+      class="p-d-flex p-flex-column ele-box-w-100"
+    >
+      <p>สมัครสมาชิก</p>
     </div>
   </div>
+</div>
+<!-- 
+<div class="conthiner-login">
   <div class="from box">
     <form>
       <div
@@ -43,12 +52,13 @@
           text-align: center;
           font-size: 50px;
           padding: 0px 27px 27px 27px;
-          color: #349ae1;
+          color: #2a2a2a;
         "
       >
-        Sign in
+        Login
       </div>
       <br />
+
       <input
         type="text"
         placeholder="Username"
@@ -80,6 +90,12 @@
           </li>
         </ol>
       </div>
+      <cust-button
+        inputId="SAVE"
+        [label]="'LABEL.SAVE' | translate"
+        className="cust-btn-primary k-ml p-m-2"
+        [CustConfig]="buttonConfig"
+      ></cust-button>
       <button class="submit" (click)="login(); messagingService.clear()">
         Login</button
       ><br /><br /><br /><br />
@@ -94,87 +110,4 @@
     </form>
   </div>
 </div>
-
-<!-- 
-<div class="container">
-	<div class="cd">
-		<div
-			class="colume-left"
-			style="background: url({{ background }}) center center/cover"
-		>
-			<div class="comtai-filterAdmin">
-				<div style="display: flex; justify-content: center; padding: 25px 0px">
-					<div class="filterAdmin">
-						<i class="{{ icon }}" style="font-size: 45px; color: #fff"></i>
-					</div>
-				</div>
-				<div
-					style="
-						color: #fff;
-						font-size: 26px;
-						color: white;
-						text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-					"
-				>
-					{{ message }}
-				</div>
-			</div>
-		</div>
-		<div class="from-login">
-			<div class="sign">Sign in</div>
-			<br /><br />
-			<form>
-				<input
-					type="text"
-					placeholder="Username"
-					class="input"
-					name="username"
-					[(ngModel)]="user.username"
-				/><br /><br />
-				<input
-					type="password"
-					placeholder="Password"
-					class="input"
-					name="password"
-					id="password"
-					[(ngModel)]="user.password"
-				/><br /><br />
-				<div class="cleck-box">
-					<input
-						style="height: 20px; width: 20px; border: 2px solid red"
-						type="checkbox"
-						(change)="onChange($event)"
-					/>
-					<small>Show password</small>
-				</div>
-				<br /><br />
-				<div *ngIf="messagingService.messages.length">
-					<ol>
-						<li *ngFor="let message of messagingService.messages">
-							<cust-alert alertType="text" value="{{ message }}"></cust-alert>
-						</li>
-					</ol>
-				</div>
-				<button class="submit" (click)="login(); messagingService.clear()">
-					Login</button
-				><br />
-			</form>
-			<div class="signUp">
-				 ถ้ายังไม่มีบัญชีผู้ใช้กรุณาติดต่อที่ฝ่ายบุคคล
-			</div>
-		</div>
-	</div>
-</div> -->
-<!-- <div class="container-rgt" [class.container-rgt-none]="cardRegister">
-		<div class="cards">
-			<div class="close" (click)="close()"><i class="fas fa-times"></i></div>
-			<p style="font-size: 20px">Register</p>
-			<br />
-			<input class="rgt" placeholder="Name" />
-			<input class="rgt" placeholder="Last Name" />
-			<input class="rgt" placeholder="Email" />
-			<input class="rgt" placeholder="Password" />
-			<input class="rgt" placeholder="Password confim" /><br />
-			<button class="submit">Register</button><br />
-		</div>
-	</div> -->
+-->

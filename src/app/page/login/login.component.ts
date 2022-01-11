@@ -1,3 +1,5 @@
+import { BankItemModel } from './../../models/bankItemModel';
+import { LoggingModel } from './../../shared/models/system_model/miscellaneous_model';
 import { Message } from 'primeng/api';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { authenService } from 'app/shared/services/authen.service';
@@ -10,6 +12,9 @@ import {
   ActivationStart,
   RouteConfigLoadEnd,
 } from '@angular/router';
+import { BaseItemComponent } from 'app/core/components/base-item/base-item.component';
+import { ButtonConfig, InputTextConfig } from 'app/shared/config/format.config';
+import { LoginModel } from 'app/models/loginModel';
 
 @Component({
   selector: 'app-login',
@@ -19,7 +24,10 @@ import {
 export class LoginComponent implements OnInit {
   @Output() onlogins = new EventEmitter<boolean>();
   loadding = false;
+  public buttonConfig = ButtonConfig.SAVE;
   cardRegister = false;
+  model: LoginModel;
+  public DEFAULT_INPUTTEXT = InputTextConfig.DEFAULT_INPUTTEXT;
 
   message: string;
   background: string;
@@ -34,7 +42,9 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private AuthenService: authenService,
     public messagingService: MessagingService
-  ) {}
+  ) {
+    this.model = new LoginModel();
+  }
 
   host(key: any) {
     let filterAdmin = document.getElementsByClassName(

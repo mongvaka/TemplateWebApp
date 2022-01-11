@@ -1,4 +1,4 @@
-$shadow-btn: rgba(99, 99, 99, 0.28) 5px 5px 5px 0px;
+$shadow-btn: rgba(131, 131, 131, 0.28) 5px 5px 5px 0px;
 $shadow-btn-hover: rgba(99, 99, 99, 0.53) 5px 5px 5px 0px;
 
 .cust-g-btn {
@@ -15,12 +15,9 @@ $shadow-btn-hover: rgba(99, 99, 99, 0.53) 5px 5px 5px 0px;
   cursor: pointer;
   border: 2px solid $primary_hover;
   background-color: $primary_hover;
-  box-shadow: $shadow-btn-hover;
-  transform: scale(1.2);
 }
 .cust-btn-primary:active {
-  transform: scale(1.5);
-  opacity: 0.1;
+  transform: scale(1.1);
 }
 
 .cust-btn-danger:hover {
@@ -81,7 +78,7 @@ $shadow-btn-hover: rgba(99, 99, 99, 0.53) 5px 5px 5px 0px;
   background-color: $color;
   color: #fff;
   font-weight: 500;
-  font-size: 1rem;
+
   border-radius: 4px;
   transition: 0.3s;
   cursor: pointer;
@@ -90,6 +87,9 @@ $shadow-btn-hover: rgba(99, 99, 99, 0.53) 5px 5px 5px 0px;
 
 .cust-btn-primary {
   @include btn($color: $primary);
+  border-radius: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .cust-btn-danger {
   @include btn($color: $danger);

@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app-icefac": {
+    "app-template": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/app-icefac",
+            "outputPath": "dist/app-template",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,18 +73,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "app-icefac:build"
+            "browserTarget": "app-template:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "app-icefac:build:production"
+              "browserTarget": "app-template:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app-icefac:build"
+            "browserTarget": "app-template:build"
           }
         },
         "test": {
@@ -121,16 +121,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "app-icefac:serve"
+            "devServerTarget": "app-template:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "app-icefac:serve:production"
+              "devServerTarget": "app-template:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "app-icefac"
+  "defaultProject": "app-template"
 }
