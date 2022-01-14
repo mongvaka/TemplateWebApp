@@ -1,5 +1,4 @@
 import { ViewBaseEntity } from 'app/core/components/base/viewBaseEntity';
-import { SysUserBranchMappingView } from './SysUserBranchMappingView';
 
 export class SysUserTableView extends ViewBaseEntity {
   public id: string = null;
@@ -16,8 +15,6 @@ export class SysUserTableView extends ViewBaseEntity {
 
   public languageId: string = null;
 
-  public sysUserCompanyMappingList: SysUserBranchMappingView[] = null;
-  //public sysUserRolesViewList: SysUserRolesView[] = null;
   public employeeMappingList: UserEmployeeMappingView[] = null;
 }
 export class UserEmployeeMappingView {

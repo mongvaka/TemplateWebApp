@@ -48,7 +48,7 @@ export class NotificationService {
   showSuccess(message: MessageModel): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     const msg: Message = {
       severity: 'success',
@@ -63,7 +63,7 @@ export class NotificationService {
   showInfo(message: MessageModel): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     const msg: Message = {
       severity: 'info',
@@ -78,7 +78,7 @@ export class NotificationService {
   showWarn(message: MessageModel): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     const msg: Message = {
       severity: 'warn',
@@ -93,7 +93,7 @@ export class NotificationService {
   showError(message: MessageModel): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     const msg: Message = {
       severity: 'error',
@@ -139,7 +139,7 @@ export class NotificationService {
   showMultipleToastError(message: MessageModel, severity = 'error'): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     const toastTimeout = getToastErrorTimeout();
     const translatedTopic: string = getTranslateMessage(message.topic);
@@ -173,7 +173,7 @@ export class NotificationService {
   ): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     const toastTimeout = getToastErrorTimeout();
     const translatedTopic: string = message.topic.toString();
@@ -375,7 +375,7 @@ export class NotificationService {
   showDeletedInfo(): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     const msg: Message = {
       severity: 'info',
@@ -503,7 +503,7 @@ export class NotificationService {
   showNotificationFromResponse(message: MessageModel): void {
     let title = document.querySelector('.ui-panel-title');
     if (isNullOrUndefined(title)) {
-      title = document.querySelector('.ivz-panel-title');
+      title = document.querySelector('.cust-panel-title');
     }
     let toastTimeout = getToastWarningTimeout();
     const topics: TranslateModel[] = [];

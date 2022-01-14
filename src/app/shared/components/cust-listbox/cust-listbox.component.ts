@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { isNullOrUndefined } from 'util';
+import { isNullOrUndefined } from 'app/shared/functions/value.function';
 import { CustBaseComponent } from '../cust-base/cust-base';
 
 @Component({

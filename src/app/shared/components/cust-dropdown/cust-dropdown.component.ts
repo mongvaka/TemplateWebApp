@@ -169,13 +169,13 @@ export class CustDropdownComponent extends CustBaseComponent implements OnInit {
     });
   }
   onFocus(): void {
-    // const emitValue: IvzDropdownOnFocusModel = {
+    // const emitValue: CustDropdownOnFocusModel = {
     //   inputId: this.bindingInputId,
-    //   ivzModel: this.bindingModel,
+    //   custModel: this.bindingModel,
     //   readonly: this.getReadonly(this.bindingInputId),
     //   isLoadedOnFirstFocus: this.isLoadedOnFirstFocus,
     //   options: this.bindingOptions
     // };
-    // this.ivzOnFocus.next(emitValue);
+    // this.custOnFocus.next(emitValue);
   }
 }

@@ -1,5 +1,5 @@
 export * from './accessRightView';
-export * from './SysUserBranchMappingView';
+export * from './sysUserBranchMappingView';
 export * from './sysUserSettingsView';
 export * from './sysUserTableView';
 export * from './accessModeView';

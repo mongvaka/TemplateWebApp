@@ -1,11 +1,11 @@
-<!-- <cust-input-text inputId="BOX" [(ivzModel)]="testModel" [ivzConfig]="DEFAULT_INPUTTEXT" required></cust-input-text> -->
+<!-- <cust-input-text inputId="BOX" [(custModel)]="testModel" [custConfig]="DEFAULT_INPUTTEXT" required></cust-input-text> -->
 <div class="p-d-flex p-flex-column">
   <div class="p-d-flex p-flex-wrap">
     <div class="p-d-flex p-flex-column flex-grow-1">
       <cust-input-text
         inputId="BOX"
         [(CustModel)]="fileName"
-        [ivzConfig]="DEFAULT_INPUTTEXT"
+        [custConfig]="DEFAULT_INPUTTEXT"
         [disabled]="true"
       ></cust-input-text>
       <input
@@ -22,7 +22,7 @@
       <cust-button
         icon="pi pi-upload"
         className="cust-btn-primary k-ml p-m-2"
-        [ivzConfig]="ICON"
+        [custConfig]="ICON"
         [disabled]="!allowBrowse"
         (click)="onBrowse($event)"
       >
@@ -62,7 +62,7 @@
       <cust-button
         icon="pi pi-eye"
         className="cust-primary-btn p-ml-2"
-        [ivzConfig]="ICON"
+        [custConfig]="ICON"
         (click)="onPreviewFile()"
         [disabled]="!displayFile.isPreviewable"
         *ngIf="displayFile.isPreviewable && visiblePreviewBtn"
@@ -73,8 +73,8 @@
   <!-- <div>
     <cust-textarea
       inputId="REMARK"
-      [(ivzModel)]="fileDescription"
-      [ivzConfig]="DEFAULT_TEXTAREA"
+      [(custModel)]="fileDescription"
+      [custConfig]="DEFAULT_TEXTAREA"
       (blur)="onDescriptionBlur($event)"
       [disabled]="isView"
     >
@@ -91,7 +91,7 @@
     disabled="true"
     [value]="!isUndefinedOrZeroLength(displayFile.fileDisplayName) ? displayFile.fileDisplayName : displayFile.fileName"
   />
-  <cust-input-text inputId="BOX" [(ivzModel)]="testModel" [ivzConfig]="DEFAULT_INPUTTEXT" required></cust-input-text>
+  <cust-input-text inputId="BOX" [(custModel)]="testModel" [custConfig]="DEFAULT_INPUTTEXT" required></cust-input-text>
   <input *ngIf="!isMultiple" #inputfile type="file" [accept]="acceptFormat" style="display: none" (change)="changeListener($event)" />
   <button
     pButton

@@ -1,4 +1,3 @@
-import { SysUserBranchMappingView } from '.';
 import { AccessRightView } from './accessRightView';
 
 export class SysUserSettingsItemView {
@@ -20,5 +19,4 @@ export class SysUserSettingsItemView {
   public userImage: string = null;
 
   public accessRights: AccessRightView[] = null;
-  public sysUserCompanyMappings: SysUserBranchMappingView[] = null;
 }

@@ -338,7 +338,7 @@ export class BaseListComponent<T> extends BaseComponent {
   private setDisableExport(): void {
     if (!isNullOrUndefined(this.searchParam)) {
       const inputs = document.getElementsByName(this.searchParam.tableKey);
-      const panel = getParentNodeByClass(inputs[0], 'ivz-panel');
+      const panel = getParentNodeByClass(inputs[0], 'cust-panel');
       if (!isNullOrUndefined(panel)) {
         const btns = panel.querySelectorAll('.p-button-text');
         btns.forEach((btn: Element) => {

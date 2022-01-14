@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { InputSwitchConfigModel } from 'app/shared/models/system_model/cust_component_model';
-import { isNullOrUndefined } from 'util';
 import { CustBaseComponent } from '../cust-base/cust-base';
 
 @Component({

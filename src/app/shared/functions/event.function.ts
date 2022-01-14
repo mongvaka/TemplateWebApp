@@ -21,7 +21,7 @@ export function reCalcFunctionAndRelatedDialogPosition(event: any): void {
       limited++;
     }
     if (!isNullOrUndefined(ele) && ids.some((s) => s === ele.id)) {
-      let card = document.querySelector('.ivz-item-card');
+      let card = document.querySelector('.cust-item-card');
       const modal = ele.querySelector('.p-tieredmenu-overlay');
       let btn = event.target.parentNode.parentNode;
       while (btn.previousSibling.nodeName === ElementType.COMMENT) {
@@ -29,7 +29,7 @@ export function reCalcFunctionAndRelatedDialogPosition(event: any): void {
       }
       if (!isNullOrUndefined(modal)) {
         // setTimeout(() => {
-        //   if (!isNullOrUndefined(btn.closest('.ivz-div-panel-btn-group'))) {
+        //   if (!isNullOrUndefined(btn.closest('.cust-div-panel-btn-group'))) {
         //     if (modal.clientWidth + btn.previousSibling.offsetLeft > card.clientWidth) {
         //       console.log('if',card.clientWidth ,modal.clientWidth,btn.previousSibling.offsetTop);
         //       modal.style.setProperty('left', `${card.clientWidth - modal.clientWidth}px`);

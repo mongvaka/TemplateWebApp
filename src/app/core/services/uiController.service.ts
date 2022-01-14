@@ -30,6 +30,7 @@ import {
   guidValidation,
   pathToBranchType,
   removeUrlId,
+  isNullOrUndefined,
 } from 'app/shared/functions/value.function';
 import { SearchParameter } from 'app/shared/models/system_model';
 import {
@@ -43,7 +44,6 @@ import {
 } from 'app/shared/models/system_model/miscellaneous_model';
 import { Subject, interval, Observable } from 'rxjs';
 import { takeWhile } from 'rxjs/operators';
-import { isNullOrUndefined } from 'util';
 
 @Injectable({
   providedIn: 'root',
