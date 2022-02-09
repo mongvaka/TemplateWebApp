@@ -1,4 +1,5 @@
 $primary: #353535;
+$negative: #ffffff;
 $primary_hover: #2f2f2f;
 $light: #ffffff;
 $light_hover: rgb(231, 237, 253);
@@ -17,8 +18,6 @@ $file: #fdd244f8;
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 * {
-  // font-family: "Prompt", sans-serif;
-  //  color: rgb(117, 117, 117);
   font-family: "Varela Round", sans-serif;
   font-size: 18px;
 }

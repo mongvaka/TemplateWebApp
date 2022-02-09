@@ -98,7 +98,7 @@ export class AppComponent implements OnInit {
     // this.topMenuNone = value;
   }
   click(url: any): any {
-    if (url === '/login' || url === '/') {
+    if (url === '/login' || url === '/' || url === '/authen/register') {
       this.showMenuService.isPresentingLeftMenu.next(true);
       this.showMenuService.isPresentingTopMenu.next(true);
       this.showMenuService.isPresentingFooter.next(true);

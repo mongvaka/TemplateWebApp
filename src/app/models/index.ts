@@ -15,3 +15,6 @@ export * from './accessItemModel';
 export * from './accessListModel';
 export * from './bankItemModel';
 export * from './bankListModel';
+export * from './registerModel';
+export * from './productItemModel';
+export * from './productListModel';

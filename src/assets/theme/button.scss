@@ -91,6 +91,13 @@ $shadow-btn-hover: rgba(99, 99, 99, 0.53) 5px 5px 5px 0px;
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.cust-btn-negative {
+  @include btn($color: $negative);
+  border-radius: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: $primary;
+}
 .cust-btn-danger {
   @include btn($color: $danger);
 }

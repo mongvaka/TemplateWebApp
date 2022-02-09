@@ -1,0 +1,94 @@
+.RegisterTitle {
+  font-size: 50px;
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.StepNumber {
+  width: 70px;
+  height: 70px;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  box-shadow: 10px;
+  font-size: 25px;
+  align-self: flex-end;
+  border-radius: 50px;
+  grid-column: 1;
+}
+.StepNumber1 {
+  @extend .StepNumber;
+  background-color: var(--step1);
+}
+.StepNumber2 {
+  @extend .StepNumber;
+  background-color: var(--step2);
+}
+.StepNumber3 {
+  @extend .StepNumber;
+  background-color: var(--step3);
+}
+.StepNumber4 {
+  @extend .StepNumber;
+  background-color: var(--step4);
+}
+.StepText {
+  word-spacing: 10px;
+  margin-top: 15px;
+  grid-column: 2;
+  width: auto;
+}
+.p {
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+.p1 {
+  @extend .p;
+  color: var(--step1);
+}
+.p2 {
+  @extend .p;
+  color: var(--step2);
+}
+.p3 {
+  @extend .p;
+  color: var(--step3);
+}
+.p4 {
+  @extend .p;
+  color: var(--step4);
+}
+.StepItem {
+  width: auto;
+  display: flex;
+  gap: 0px;
+}
+.CreateLine1 {
+  border-top: 2px solid var(--step1);
+}
+.CreateLine2 {
+  border-top: 2px solid var(--step2);
+}
+.CreateLine3 {
+  border-top: 2px solid var(--step3);
+}
+.CreateLine4 {
+  border-top: 2px solid var(--step4);
+}
+.StepRegister {
+  width: max-content;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ConfirmSection {
+  display: flex;
+  padding-left: 50%;
+}
+.Hiden {
+  visibility: hidden;
+}

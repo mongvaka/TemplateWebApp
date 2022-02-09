@@ -97,6 +97,7 @@ export const ROUTE_MASTER_GEN = {
   STOCKRETURN: 'stockreturn',
   LEGAL_PUNISHMENT: 'legalpunishment',
   CAR: 'car',
+  PRODUCT: 'product',
 };
 export const ROUTE_INFO_GEN = {
   ADDRESS_TRANS: 'addresstrans',

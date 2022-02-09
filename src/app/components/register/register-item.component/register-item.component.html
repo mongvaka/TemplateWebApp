@@ -1,0 +1,219 @@
+<div class="RegisterCard">
+  <div class="RegisterTitle">Register</div>
+  <div class="StepRegister">
+    <div class="StepItem">
+      <div class="StepNumber1">1</div>
+      <div class="StepText">
+        <p class="p1">ข้อมูลส่วนบุคคล</p>
+        <div class="CreateLine1"></div>
+      </div>
+    </div>
+    <div class="StepItem">
+      <div class="StepNumber2">2</div>
+      <div class="StepText">
+        <p class="p2">ข้อมูลติดต่อ</p>
+
+        <div class="CreateLine2"></div>
+      </div>
+    </div>
+    <div class="StepItem">
+      <div class="StepNumber3">3</div>
+      <div class="StepText">
+        <p class="p3">ข้อมูลบริษัท</p>
+
+        <div class="CreateLine3"></div>
+      </div>
+    </div>
+    <div class="StepItem">
+      <div class="StepNumber4">4</div>
+      <div class="StepText"><p class="p4">บทสรุป</p></div>
+    </div>
+  </div>
+  <div class="InputSection">
+    <div
+      *ngIf="currentStep == 1"
+      style="padding-left: 30%; padding-right: 30%"
+      class="p-d-flex p-flex-wrap"
+    >
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.EMAIL_ADDRESS" | translate }} : </label>
+        <cust-input-text
+          inputId="EMAIL_ADDRESS"
+          [(CustModel)]="model.email_address"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.PASSWORD" | translate }} : </label>
+        <cust-input-text
+          inputId="PASSWORD"
+          [(CustModel)]="model.password"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.CONFIRM_PASSWORD" | translate }} : </label>
+        <cust-input-text
+          inputId="CONFIRM_PASSWORD"
+          [(CustModel)]="model.confirm_password"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.NAME" | translate }} : </label>
+        <cust-input-text
+          inputId="NAME"
+          [(CustModel)]="model.name"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.SURNAME" | translate }} : </label>
+        <cust-input-text
+          inputId="SURNAME"
+          [(CustModel)]="model.surname"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+    </div>
+
+    <div
+      *ngIf="currentStep == 2"
+      style="padding-left: 30%; padding-right: 30%"
+      class="p-d-flex p-flex-wrap"
+    >
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.PHONE_NUMER" | translate }} : </label>
+        <cust-input-text
+          inputId="PHONE_NUMER"
+          [(CustModel)]="model.phone_number"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.PROVINCE" | translate }} : </label>
+        <cust-input-text
+          inputId="PROVINCE"
+          [(CustModel)]="model.province"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.CITY" | translate }} : </label>
+        <cust-input-text
+          inputId="CITY"
+          [(CustModel)]="model.city"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.DISTRICT" | translate }} : </label>
+        <cust-input-text
+          inputId="DISTRICT"
+          [(CustModel)]="model.district"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.ADDRESS" | translate }} : </label>
+        <cust-input-text
+          inputId="ADDRESS"
+          [(CustModel)]="model.address"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+    </div>
+
+    <div
+      *ngIf="currentStep == 3"
+      style="padding-left: 30%; padding-right: 30%"
+      class="p-d-flex p-flex-wrap"
+    >
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.COMPANY_NAME" | translate }} : </label>
+        <cust-input-text
+          inputId="COMPANY_NAME"
+          [(CustModel)]="model.company_name"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.COMPANY_TYPE" | translate }} : </label>
+        <cust-input-text
+          inputId="COMPANY_TYPE"
+          [(CustModel)]="model.company_type"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+      <div class="p-d-flex p-flex-column ele-box-w-100">
+        <label>{{ "LABEL.BUSINESS_TYPE" | translate }} : </label>
+        <cust-input-text
+          inputId="BUSINESS_TYPE"
+          [(CustModel)]="model.business_type"
+          [CustConfig]="DEFAULT_INPUTTEXT"
+        >
+        </cust-input-text>
+      </div>
+    </div>
+
+    <div *ngIf="currentStep == 4" class="StepRegister">
+      <div class="StepItem">
+        <div class="StepNumber1 Hiden">1</div>
+        <div class="StepText">
+          <p class="p1 Hiden">ข้อมูลส่วนบุคคล</p>
+          <p class="PlaceHolder">ซื่อบริษัท</p>
+          <p class="Value">ห้างหุ้นส่วน สมชัย จำกัด</p>
+        </div>
+      </div>
+      <div class="StepItem">
+        <div class="StepNumber2 Hiden">2</div>
+        <div class="StepText">
+          <p class="p2 Hiden">ข้อมูลติดต่อ</p>
+          <p class="PlaceHolder">ซื่อบริษัท</p>
+          <p class="Value">ห้างหุ้นส่วน สมชัย จำกัด</p>
+        </div>
+      </div>
+      <div class="StepItem">
+        <div class="StepNumber3 Hiden">3</div>
+        <div class="StepText">
+          <p class="p3 Hiden">ข้อมูลบริษัท</p>
+          <p class="PlaceHolder">ซื่อบริษัท</p>
+          <p class="Value">ห้างหุ้นส่วน สมชัย จำกัด</p>
+        </div>
+      </div>
+      <div class="StepItem">
+        <div class="StepNumber4 Hiden">4</div>
+        <div class="StepText"><p class="p4 Hiden">บทสรุป</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="ConfirmSection">
+    <cust-button
+      *ngIf="currentStep > 1"
+      inputId="BACK"
+      [label]="'LABEL.BACK' | translate"
+      className="cust-btn-negative k-ml p-m-2"
+      [CustConfig]="buttonConfig"
+      (CustClick)="addStep(-1)"
+    ></cust-button>
+    <cust-button
+      inputId="NEXT"
+      [label]="'LABEL.NEXT' | translate"
+      className="cust-btn-primary k-ml p-m-2"
+      [CustConfig]="buttonConfig"
+      (CustClick)="addStep(1)"
+    ></cust-button>
+  </div>
+</div>

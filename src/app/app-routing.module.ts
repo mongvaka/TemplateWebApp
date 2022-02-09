@@ -25,6 +25,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./page/setup/setup.module').then((m) => m.SetupModule),
   },
+  {
+    path: 'authen',
+    loadChildren: () =>
+      import('./page/authen/authen.module').then((m) => m.AuthenPageModule),
+  },
 
   // _____________________________404 page not found___________________________
   {
